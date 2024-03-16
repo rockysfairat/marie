@@ -1,7 +1,7 @@
 export function Nav() {
   return (
-    <nav>
-      <ol>
+    <nav className="w-full px-24">
+      <ol className="flex justify-between text-sm uppercase">
         <li>Projects</li>
         <li>Services</li>
         <li>Contact</li>

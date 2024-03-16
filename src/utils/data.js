@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: "001",
-    projectImgSrc: "/placeholder.png",
+    projectImgSrc: "/Projects/Bedroom_01.jpg",
     projectImgAlt: "Placeholder",
     projectName: "The Borsch",
     projectYear: "2020",
@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     id: "002",
-    projectImgSrc: "/placeholder.png",
+    projectImgSrc: "/Projects/Bedroom_01.jpg",
     projectImgAlt: "Placeholder",
     projectName: "Mikulov house",
     projectYear: "2021",
@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     id: "003",
-    projectImgSrc: "/placeholder.png",
+    projectImgSrc: "/Projects/Bedroom_01.jpg",
     projectImgAlt: "Placeholder",
     projectName: "Holešovice apt",
     projectYear: "2020",
@@ -28,19 +28,19 @@ export const projects = [
 export const services = [
   {
     id: "01",
-    serviceImgSrc: "/placeholder.png",
+    serviceImgSrc: "/Services/04_Post.jpg",
     serviceImgAlt: "Placeholder",
     serviceName: "Architecture and interior design",
   },
   {
     id: "02",
-    serviceImgSrc: "/placeholder.png",
+    serviceImgSrc: "/Services/about.jpg",
     serviceImgAlt: "Placeholder",
     serviceName: "All stages of project documentation",
   },
   {
     id: "03",
-    serviceImgSrc: "/placeholder.png",
+    serviceImgSrc: "/Services/sven-mieke-fteR0e2BzKo-unsplash.jpg",
     serviceImgAlt: "Placeholder",
     serviceName: "Author supervision",
   },
