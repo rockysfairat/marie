@@ -11,11 +11,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="w-full pt-4 flex flex-col items-center ">
-        <h1 className=" w-full px-24 uppercase font-semibold text-lg">
+        <h1 className=" w-full px-24 uppercase font-semibold text-3xl">
           marie.does.design
         </h1>
         <hr
-          style={{ color: "black", height: "1px", width: "85%" }}
+          style={{ color: "black", height: "1px", width: "90%" }}
           className="my-[2px]"
         />
         <Nav />

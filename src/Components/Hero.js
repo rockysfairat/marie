@@ -4,10 +4,10 @@ export function Hero() {
   return (
     <div className="bg-dark text-xl [&>*]:w-2/5 [&>*]:h-3/5 flex items-center justify-between px-24">
       <div className="flex w-1/2 flex-col justify-between">
-        <p className="text-7xl text-white max-w-sm">
+        <p className="text-8xl text-white max-w-sm">
           FROM CONCEPT TO EXECUTION
         </p>
-        <p className="text-2xl text-greyDark mt-[125px] w-[550px]">
+        <p className="text-3xl text-greyDark mt-[200px] w-[650px]">
           Experience a seamless journey from conceptual design to flawless
           execution with comprehensive range of services
         </p>
@@ -21,7 +21,7 @@ export function Hero() {
           alt="Placeholder"
           loading="lazy"
           // style={{ objectFit: "contain" }}
-          className="w-full h-[500px]"
+          className="w-[600px] max-h-[700px]"
         />
       </div>
     </div>
