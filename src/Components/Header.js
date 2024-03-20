@@ -13,7 +13,7 @@ export function Header() {
       />
 
       <div className="relative flex flex-col w-2/5 justify-center h-[350px] ">
-        <p className="text-4xl text-balanced leading-snug uppercase max-w-[300px] font-light mt-[-50px]">
+        <p className="text-4xl text-balanced leading-snug uppercase max-w-[300px] font-light mt-[-80px]">
           architecture interior design archviz
         </p>
         <a
