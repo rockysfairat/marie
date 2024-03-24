@@ -22,7 +22,9 @@ export function Projects() {
                 width={500}
                 height={300}
                 style={{ objectFit: "cover" }}
+                className="h-[300px] w-[300px]"
               />
+
               <div className="flex flex-col [&>*]:flex [&>*]:justify-start border-dark border-t-[1px] mt-3 pt-3">
                 <div className="[&>*:nth-child(odd)]:w-[20%] [&>*:nth-child(odd)]:font-bold [&>*:nth-child(even)]:font-light">
                   <p>Project</p>

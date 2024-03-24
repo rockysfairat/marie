@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     id: "002",
-    projectImgSrc: "/Projects/Bedroom_01.jpg",
+    projectImgSrc: "/Projects/2974927498472947_C09.jpg",
     projectImgAlt: "Placeholder",
     projectName: "Mikulov house",
     projectYear: "2021",
