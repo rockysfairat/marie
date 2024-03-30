@@ -14,6 +14,7 @@ module.exports = {
       greyLight: "#cecdca",
       greyDark: "#bababe",
       biege: "#e1d5c7",
+      green: "#00f00f",
     },
   },
   extend: {
