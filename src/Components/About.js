@@ -4,8 +4,8 @@ export function About() {
   return (
     <div className="bg-greyDark flex flex-col px-24">
       <h2 className="w-full">About</h2>
-      <div className="flex justify-between">
-        <div className="w-[60%] flex flex-col justify-center [&>*]:mb-5 text-dark">
+      <div className="flex justify-between border-2 border-green">
+        <div className="w-[60%] flex flex-col justify-center [&>*]:mb-5 text-dark border-2 border-dark">
           <p>
             I am an open-minded architect with additional experience in design —
             with passion for new technologies and art.{" "}
@@ -25,13 +25,15 @@ export function About() {
           </p>
         </div>
 
-        <Image
-          src="/About/20231109_082620-01.jpeg"
-          width={300}
-          height={300}
-          alt="Placeholder"
-          style={{ objectFit: "cover" }}
-        />
+        <div className="border-2 border-dark">
+          <Image
+            src="/About/20231109_082620-01.jpeg"
+            width={300}
+            height={300}
+            alt="Placeholder"
+            style={{ objectFit: "cover" }}
+          />
+        </div>
       </div>
     </div>
   );
