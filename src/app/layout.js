@@ -19,8 +19,9 @@ export default function RootLayout({ children }) {
           className="my-[2px]"
         />
         <Nav />
-        <Header />
+
         {children}
+
       </body>
     </html>
   );

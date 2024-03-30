@@ -6,6 +6,8 @@ export const projects = [
     projectName: "The Borsch",
     projectYear: "2020",
     projectType: "Bistro",
+    pageUrl: "The-Borsch",
+    data: "test"
   },
   {
     id: "002",
@@ -14,6 +16,8 @@ export const projects = [
     projectName: "Mikulov house",
     projectYear: "2021",
     projectType: "Residential",
+    pageUrl: "Mikulov-house",
+    data: "test"
   },
   {
     id: "003",
@@ -22,6 +26,8 @@ export const projects = [
     projectName: "Holešovice apt",
     projectYear: "2020",
     projectType: "Real estate archviz",
+    pageUrl: "Holesovice",
+    data: "test"
   },
 ];
 

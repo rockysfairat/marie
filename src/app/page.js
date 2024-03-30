@@ -5,10 +5,12 @@ import { Services } from "@/Components/Services";
 import { About } from "@/Components/About";
 import { Reviews } from "@/Components/Reviews";
 import { ContactMe } from "@/Components/ContactMe";
+import { Header } from "@/Components/Header";
 
 export default function Home() {
   return (
     <main className="flex flex-col [&>*]:min-h-screen">
+      <Header />
       <Hero />
       <Projects />
       <Services />
