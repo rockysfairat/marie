@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <div className="bg-dark flex h-screen lg:flex-row flex-col items-center xl:justify-between jusify-center  border-green border-2 ">
-      <div className="flex w-1/2 flex-col xl:justify-between jusify-center  border-green border-2 xl:[&>*]:mx-24 [&>*]:mx-0 h-fit xl:h-[80%]">
-        <div className="border-green border-2 font-montserrat">
+    <div className="bg-dark flex h-screen lg:flex-row flex-col items-center xl:justify-between jusify-center">
+      <div className="flex w-1/2 flex-col xl:justify-between jusify-center  border-green border-2 xl:[&>*]:ml-24 [&>*]:ml-0 xl:[&>*]:mr-10 [&>*]:mr-0 h-fit xl:h-[80%]">
+        <div className="border-green border-2 font-montserrat pt-9">
           <p className="text-6xl xl:text-8xl text-white max-w-sm">FROM</p>
           <p className="text-6xl xl:text-8xl text-white">CONCEPT</p>
           <p className="text-6xl xl:text-8xl text-white">TO </p>
