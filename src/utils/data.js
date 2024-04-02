@@ -7,7 +7,7 @@ export const projects = [
     projectYear: "2020",
     projectType: "Bistro",
     pageUrl: "The-Borsch",
-    data: "test",
+    clients: "Nataliia Bas and Alex Martynov"
   },
   {
     id: "002",
@@ -18,6 +18,22 @@ export const projects = [
     projectType: "Residential",
     pageUrl: "Mikulov-house",
     clients: "Young couple",
+    titleImg: "Header/C09.jpg",
+    randomImages: ["/Mikulov/C06_post.jpg", "/Mikulov/C07_post.jpg"],
+    showCaseImages: ["/Mikulov/anna2_2_Post.jpg", "/Mikulov/Bathroom_1.jpg"],
+    beforeAndAfterImages: ["/Mikulov/B01_2.jpg", "/Mikulov/B01_3_post.jpg"],
+    heroSection: {
+      imageUrl: "/Hero/20231226_143921.jpg",
+      description: `Mikulov house is a residential interior project for a young couple,
+          both working remotely.Design includes customizing a typical housing
+          development for the clients specific needs and preferences, as well as
+          negotiating changes with the developer.Interior is based on natural
+          colors and materials, creating a cozy setting for their family life.
+          We broke down the interior work into stages according to priorities to
+          ensure it remains cost- effective`
+    },
+
+
     floorPlanImages: [
       {
         imageUrl: "/Mikulov/ground-floor-before.jpg",
@@ -36,7 +52,6 @@ export const projects = [
         description: "First floor by me",
       },
 
-      ,
     ],
   },
   {

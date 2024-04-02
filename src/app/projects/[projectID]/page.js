@@ -1,4 +1,5 @@
-"use client";
+"use client"
+
 import { projects } from "@/utils/data";
 import Image from "next/image";
 
@@ -16,50 +17,65 @@ async function page({ params }) {
       <header className="w-full h-[90%] flex items-center justify-center  space-x-[90px] py-[90px]">
         <Image
           src="/Header/C09.jpg"
-          width={650}
+          width={1200}
           height={600}
           alt="Placeholder"
           style={{ objectFit: "cover" }}
-          className=" max-h-[550px] max-w-[5600px]"
+          className=" max-h-[550px] max-w-[600px]"
         />
 
         <div className="relative flex flex-col w-4/8 justify-center h-[550px] ">
           <p className="text-5xl text-balanced leading-snug uppercase max-w-[400px] font-light mt-[-80px] tracking-wide">
-            {data.projectName}
+            {data?.projectName}
           </p>
           <div className="mt-10 text-lg">
             <p>
               <span className="font-bold inline-block w-[80px]">Type</span>
-              {data.projectType}
+              {data?.projectType}
             </p>
             <p>
               <span className="font-bold inline-block w-[80px]">Clients</span>
-              {data.clients}
+              {data?.clients}
             </p>
             <p>
               <span className="font-bold inline-block w-[80px]">Year</span>
-              {data.projectYear}
+              {data?.projectYear}
             </p>
           </div>
         </div>
       </header>
+      {
+        data.randomImages && (
+          <div className="flex justify-center h-full p-24 gap-20">
+            {data.randomImages.map((item) => {
+              return (
+
+                <Image
+                  src={item}
+                  width={1200}
+                  height={300}
+                  alt="Placeholder"
+                  loading="lazy"
+                  style={{ objectFit: "cover" }}
+                  className="w-full h-[700px] "
+                />
+
+              );
+            })}
+          </div>
+        )
+      }
       {/* Hero section */}
 
       <div className="p-24 flex h-screen lg:flex-row flex-col items-center jusify-between">
         <p className="text-xl xl:text-2xl  text-wrap w-4/6">
-          Mikulov house is a residential interior project for a young couple,
-          both working remotely. Design includes customizing a typical housing
-          development for the clients specific needs and preferences, as well as
-          negotiating changes with the developer. Interior is based on natural
-          colors and materials, creating a cozy setting for their family life.
-          We broke down the interior work into stages according to priorities to
-          ensure it remains cost-effective
+          {data?.heroSection?.description}
         </p>
 
         <div className="flex w-1/2 justify-end">
           <Image
-            src="/Hero/20231226_143921.jpg"
-            width={300}
+            src={data?.heroSection?.imageUrl}
+            width={1200}
             height={300}
             alt="Placeholder"
             loading="lazy"
@@ -70,12 +86,12 @@ async function page({ params }) {
       </div>
       {/* Floor plan */}
       <div className="p-24 w-full flex flex-row flex-wrap">
-        {data.floorPlanImages.map((item) => {
+        {data?.floorPlanImages?.map((item) => {
           return (
             <div className="w-1/2">
               <Image
                 src={item.imageUrl}
-                width={300}
+                width={1200}
                 height={300}
                 alt="Placeholder"
                 loading="lazy"
@@ -83,9 +99,43 @@ async function page({ params }) {
                 className="w-full h-[600px] mb-2 p-10"
               />
               {item.description && (
-                <p className="ml-[100px] mb-20">{item.description}</p>
+                <p className="ml-[100px] mb-20 text-xl">{item.description}</p>
               )}
             </div>
+          );
+        })}
+      </div>
+      {/* Showcase section */}
+      {data?.showCaseImages?.map((item) => {
+        return (
+          <div className="showcase flex justify-center h-full p-24">
+            <Image
+              src={item}
+              width={1200}
+              height={300}
+              alt="Placeholder"
+              loading="lazy"
+              style={{ objectFit: "cover" }}
+              className="w-full h-[700px]"
+            />
+          </div>
+        );
+      })}
+      {/* Before and after section */}
+      <div className="beforeAndAfter flex justify-center h-full p-24 gap-20">
+        {data?.beforeAndAfterImages?.map((item) => {
+          return (
+
+            <Image
+              src={item}
+              width={1200}
+              height={300}
+              alt="Placeholder"
+              loading="lazy"
+              style={{ objectFit: "cover" }}
+              className="w-full h-[700px] "
+            />
+
           );
         })}
       </div>
