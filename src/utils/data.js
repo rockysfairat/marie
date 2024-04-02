@@ -7,17 +7,37 @@ export const projects = [
     projectYear: "2020",
     projectType: "Bistro",
     pageUrl: "The-Borsch",
-    data: "test"
+    data: "test",
   },
   {
     id: "002",
     projectImgSrc: "/Projects/2974927498472947_C09.jpg",
     projectImgAlt: "Placeholder",
     projectName: "Mikulov house",
-    projectYear: "2021",
+    projectYear: "2020-2021",
     projectType: "Residential",
     pageUrl: "Mikulov-house",
-    data: "test"
+    clients: "Young couple",
+    floorPlanImages: [
+      {
+        imageUrl: "/Mikulov/ground-floor-before.jpg",
+        description: "Ground floor by developer",
+      },
+      {
+        imageUrl: "/Mikulov/ground-floor-after.jpg",
+        description: "Ground floor by me",
+      },
+      {
+        imageUrl: "/Mikulov/first-floor-before.jpg",
+        description: "First floor by me",
+      },
+      {
+        imageUrl: "/Mikulov/first-floor-after.jpg",
+        description: "First floor by me",
+      },
+
+      ,
+    ],
   },
   {
     id: "003",
@@ -27,7 +47,7 @@ export const projects = [
     projectYear: "2020",
     projectType: "Real estate archviz",
     pageUrl: "Holesovice",
-    data: "test"
+    data: "test",
   },
 ];
 
