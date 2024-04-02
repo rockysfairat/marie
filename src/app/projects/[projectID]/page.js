@@ -89,9 +89,9 @@ async function page({ params }) {
       <div className="p-24 w-full flex flex-row flex-wrap">
         {data?.floorPlanImages?.map((item, idx) => {
           return (
-            <div className="w-1/2">
+            <div key={idx} className="w-1/2">
               <Image
-                key={idx}
+
                 src={item.imageUrl}
                 width={1200}
                 height={300}
@@ -110,9 +110,9 @@ async function page({ params }) {
       {/* Showcase section */}
       {data?.showCaseImages?.map((item, idx) => {
         return (
-          <div className="showcase flex justify-center h-full p-24">
+          <div key={idx} className="showcase flex justify-center h-full p-24">
             <Image
-              key={idx}
+
               src={item}
               width={1200}
               height={300}
