@@ -47,10 +47,11 @@ async function page({ params }) {
       {
         data.randomImages && (
           <div className="flex justify-center h-full p-24 gap-20">
-            {data.randomImages.map((item) => {
+            {data.randomImages.map((item, idx) => {
               return (
 
                 <Image
+                  key={idx}
                   src={item}
                   width={1200}
                   height={300}
@@ -67,7 +68,7 @@ async function page({ params }) {
       }
       {/* Hero section */}
 
-      <div className="p-24 flex h-screen lg:flex-row flex-col items-center jusify-between">
+      <div className="p-24 flex h-screen lg:flex-row flex-col items-center justify-between">
         <p className="text-xl xl:text-2xl  text-wrap w-4/6">
           {data?.heroSection?.description}
         </p>
@@ -86,10 +87,11 @@ async function page({ params }) {
       </div>
       {/* Floor plan */}
       <div className="p-24 w-full flex flex-row flex-wrap">
-        {data?.floorPlanImages?.map((item) => {
+        {data?.floorPlanImages?.map((item, idx) => {
           return (
             <div className="w-1/2">
               <Image
+                key={idx}
                 src={item.imageUrl}
                 width={1200}
                 height={300}
@@ -106,10 +108,11 @@ async function page({ params }) {
         })}
       </div>
       {/* Showcase section */}
-      {data?.showCaseImages?.map((item) => {
+      {data?.showCaseImages?.map((item, idx) => {
         return (
           <div className="showcase flex justify-center h-full p-24">
             <Image
+              key={idx}
               src={item}
               width={1200}
               height={300}
@@ -123,10 +126,11 @@ async function page({ params }) {
       })}
       {/* Before and after section */}
       <div className="beforeAndAfter flex justify-center h-full p-24 gap-20">
-        {data?.beforeAndAfterImages?.map((item) => {
+        {data?.beforeAndAfterImages?.map((item, idx) => {
           return (
 
             <Image
+              key={idx}
               src={item}
               width={1200}
               height={300}
