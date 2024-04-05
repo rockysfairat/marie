@@ -1,7 +1,7 @@
 "use client";
 import { projects } from "@/utils/data";
 import Image from "next/image";
-
+import { ContactMe } from "@/Components/ContactMe";
 async function page({ params }) {
   const projectID = params.projectID;
   // find corresponding data for project
@@ -20,7 +20,7 @@ async function page({ params }) {
           height={600}
           alt="Placeholder"
           style={{ objectFit: "cover" }}
-          className=" max-h-[550px] max-w-[5600px]"
+          className=" max-h-[550px] max-w-[600px]"
         />
 
         <div className="relative flex flex-col w-4/8 justify-center h-[550px] ">
@@ -59,7 +59,7 @@ async function page({ params }) {
         <div className="flex w-1/2 justify-end">
           <Image
             src="/Hero/20231226_143921.jpg"
-            width={300}
+            width={1000}
             height={300}
             alt="Placeholder"
             loading="lazy"
@@ -70,12 +70,13 @@ async function page({ params }) {
       </div>
       {/* Floor plan */}
       <div className="p-24 w-full flex flex-row flex-wrap">
-        {data.floorPlanImages.map((item) => {
+        {data.floorPlanImages.map((item, idx) => {
           return (
             <div className="w-1/2">
               <Image
+                key={idx}
                 src={item.imageUrl}
-                width={300}
+                width={800}
                 height={300}
                 alt="Placeholder"
                 loading="lazy"
@@ -89,6 +90,42 @@ async function page({ params }) {
           );
         })}
       </div>
+      {/* ShowCase Section */}
+      {data.showCaseImages.map((imgUrl, idx) => {
+        return (
+          <div key={idx} className="p-24 w-full flex flex-row flex-wrap">
+            <Image
+              src={imgUrl}
+              width={800}
+              height={800}
+              alt="Placeholder"
+              loading="lazy"
+              style={{ objectFit: "contain" }}
+              className="w-full h-[700px] mb-2 p-10"
+            />
+          </div>
+        );
+      })}
+      {/* Before and after section */}
+      <div className="p-24 w-full flex flex-row flex-wrap">
+        {data.beforeAfterImages.map((imgUrl, idx) => {
+          return (
+            <div className="w-1/2">
+              <Image
+                key={idx}
+                src={imgUrl}
+                width={800}
+                height={300}
+                alt="Placeholder"
+                loading="lazy"
+                style={{ objectFit: "contain" }}
+                className="w-full h-[700px] mb-2 p-10"
+              />
+            </div>
+          );
+        })}
+      </div>
+      <ContactMe />
     </>
   );
 }

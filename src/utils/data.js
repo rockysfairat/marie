@@ -35,9 +35,9 @@ export const projects = [
         imageUrl: "/Mikulov/first-floor-after.jpg",
         description: "First floor by me",
       },
-
-      ,
     ],
+    showCaseImages: ["/Mikulov/Bathroom_1.jpg", "/Mikulov/anna2_2_Post.jpg"],
+    beforeAfterImages: ["/Mikulov/B01_3_post.jpg", "/Mikulov/B01_2.jpg"],
   },
   {
     id: "003",
