@@ -71,7 +71,7 @@ async function page({ params }) {
 
         <div className="flex w-1/2 justify-end">
           <Image
-            src="/Hero/20231226_143921.jpg"
+            src={data.heroSection.imageUrl}
             width={1000}
             height={300}
             alt="Placeholder"

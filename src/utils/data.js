@@ -18,6 +18,11 @@ export const projects = [
     projectType: "Residential",
     pageUrl: "Mikulov-house",
     clients: "Young couple",
+    heroSection: {
+      description:
+        "Mikulov house is a residential interior project for a young couple, both working remotely. Design includes customizing a typical housing development for the clients specific needs and preferences, as well as negotiating changes with the developer. Interior is based on natural colors and materials, creating a cozy setting for their family life. We broke down the interior work into stages according to priorities to ensure it remains cost-effective",
+      imageUrl: "/Hero/20231226_143921.jpg",
+    },
     floorPlanImages: [
       {
         imageUrl: "/Mikulov/ground-floor-before.jpg",
