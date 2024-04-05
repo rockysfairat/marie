@@ -123,9 +123,8 @@ async function page({ params }) {
       <div className="p-24 w-full flex flex-row flex-wrap">
         {data.beforeAfterImages.map((imgUrl, idx) => {
           return (
-            <div className="w-1/2">
+            <div key={idx} className="w-1/2">
               <Image
-                key={idx}
                 src={imgUrl}
                 width={800}
                 height={300}
