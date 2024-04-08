@@ -3,22 +3,22 @@ import Image from "next/image";
 
 export function ContactMe() {
   return (
-    <div className="bg-biege w-full px-24 py-16 ">
+    <div className="bg-biege w-full px-2 lg:px-24 py-0 lg:py-16 ">
       <h2>Contact Me</h2>
-      <div className="w-full flex flex-row mr-10 mt-20">
+      <div className="w-full flex flex-col lg:flex-row mr-10 mt-20">
         <Image
           src="/ContactMe/06_Post.jpg"
           alt="Something"
           width={800}
           height={700}
           style={{ objectFit: "contain" }}
-          className="w-[60%]  mr-16"
+          className="w-full lg:w-[60%]  mr-16"
         />
         <form
           onSubmit={() => {
             console.log("test");
           }}
-          className="w-[40%] [&>h2]:text-brown [&>h2]:mb-4 [&>h2]:pt-0 [&>p]:mb-10 [&>p]:text-xl [&>h2]:border-b-[0px] [&>p]:border-b-[0px] [&>button]:mb-5"
+          className="w-full lg:w-[40%] [&>h2]:text-brown [&>h2]:mb-4 [&>h2]:pt-0 [&>p]:mb-10 [&>p]:text-xl [&>h2]:border-b-[0px] [&>p]:border-b-[0px] [&>button]:mb-5"
         >
           <h2>PHONE</h2>
           <p>+420 702 911 501</p>

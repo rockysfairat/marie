@@ -1,13 +1,11 @@
 import Image from "next/image";
 import { projects } from "../utils/data";
-import Link from 'next/link'
+import Link from "next/link";
 export function Projects() {
-
   return (
-
-    <div className="flex flex-col justify-start items-center px-24">
+    <div className="flex flex-col justify-start items-center px-2 lg:px-24">
       <h2 className="w-full">Projects</h2>
-      <div className="w-fuill flex [&>*]:w-[32%] justify-evenly">
+      <div className="w-full flex-col lg:flex-row flex [&>*]:w-[90%] lg:[&>*]:w-[32%] justify-evenly">
         {projects.map(
           ({
             id,
@@ -17,14 +15,16 @@ export function Projects() {
             projectYear,
             projectType,
             pageUrl,
-            data
+            data,
           }) => (
-            <Link key={id} href={{
-              pathname: `projects/${pageUrl}`,
-              query: {
-                test: "Test work"
-              }
-            }}
+            <Link
+              key={id}
+              href={{
+                pathname: `projects/${pageUrl}`,
+                query: {
+                  test: "Test work",
+                },
+              }}
               as={`/projects/${pageUrl}`}
             >
               <div className="flex flex-col justify-center text-dark">
@@ -57,6 +57,5 @@ export function Projects() {
         )}
       </div>
     </div>
-
   );
 }
