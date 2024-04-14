@@ -5,7 +5,7 @@ export function About() {
     <div className="bg-greyDark flex flex-col px-2 lg:px-24">
       <h2 className="w-full">About</h2>
       <div className="flex flex-col lg:flex-row justify-between">
-        <div className="w-full lg:w-[60%] flex flex-col justify-center [&>*]:mb-5 text-dark">
+        <div className="w-full lg:w-[60%] flex flex-col justify-center [&>*]:mb-5 text-dark text-xl">
           <p>
             I am an open-minded architect with additional experience in design —
             with passion for new technologies and art.{" "}
@@ -25,13 +25,14 @@ export function About() {
           </p>
         </div>
 
-        <div>
+        <div className="w-full lg:w-[450px]">
           <Image
             src="/About/20231109_082620-01.jpeg"
-            width={300}
-            height={300}
+            width={800}
+            height={800}
             alt="Placeholder"
             style={{ objectFit: "cover" }}
+            className="w-full"
           />
         </div>
       </div>
