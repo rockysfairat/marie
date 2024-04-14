@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function ContactMe() {
   return (
-    <div className="bg-biege w-full px-2 lg:px-24 py-0 lg:py-16 ">
+    <div className="bg-biege w-full px-2 lg:px-24 py-0 lg:py-16" id="ContactMe">
       <h2>Contact Me</h2>
       <div className="w-full flex flex-col lg:flex-row mr-10 mt-20">
         <Image
@@ -43,30 +43,37 @@ export function ContactMe() {
           </button>
           <h2>SOCIALS</h2>
           <div className="social-icons flex flex-row gap-2 ">
-            <Image
-              src="/ContactMe/square-whatsapp.svg"
-              width={30}
-              height={30}
-              alt="Placeholder"
-              style={{ objectFit: "cover", fill: "#544541" }}
-              className="fill-brown"
-            />
-            <Image
-              src="/ContactMe/linkedin.svg"
-              width={30}
-              height={30}
-              alt="Placeholder"
-              style={{ objectFit: "cover" }}
-              className=" max-h-[550px] max-w-[5600px]"
-            />
-            <Image
-              src="ContactMe/square-instagram.svg"
-              width={30}
-              height={30}
-              alt="Placeholder"
-              style={{ objectFit: "cover" }}
-              className=" max-h-[550px] max-w-[5600px]"
-            />
+            {" "}
+            <a href="https://api.whatsapp.com/send?phone=420702911501">
+              <Image
+                src="/ContactMe/square-whatsapp.svg"
+                width={30}
+                height={30}
+                alt="Placeholder"
+                style={{ objectFit: "cover", fill: "#544541" }}
+                className="fill-brown"
+              />
+            </a>
+            <a href="https://www.linkedin.com/in/mariiafiedosieieva/">
+              <Image
+                src="/ContactMe/linkedin.svg"
+                width={30}
+                height={30}
+                alt="Placeholder"
+                style={{ objectFit: "cover" }}
+                className=" max-h-[550px] max-w-[5600px]"
+              />
+            </a>
+            <a href="https://www.instagram.com/marie.does.design">
+              <Image
+                src="ContactMe/square-instagram.svg"
+                width={30}
+                height={30}
+                alt="Placeholder"
+                style={{ objectFit: "cover" }}
+                className=" max-h-[550px] max-w-[5600px]"
+              />
+            </a>
           </div>
         </form>
       </div>

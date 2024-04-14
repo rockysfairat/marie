@@ -3,7 +3,10 @@ import { services } from "@/utils/data";
 
 export function Services() {
   return (
-    <div className="flex flex-col justify-start items-center bg-greyLight px-2 xl:px-24 ">
+    <div
+      className="flex flex-col justify-start items-center bg-greyLight px-2 xl:px-24"
+      id="Services"
+    >
       <h2 className="w-full">Services</h2>
       <div className="w-min xl:w-full flex lg:flex-row flex-col justify-between items-start xl:[&>*]:w-[22%] flex-wrap overflow-hidden">
         {services.map(({ id, serviceImgSrc, serviceImgAlt, serviceName }) => (

@@ -3,7 +3,10 @@ import { projects } from "../utils/data";
 import Link from "next/link";
 export function Projects() {
   return (
-    <div className="flex flex-col justify-start items-center px-2 lg:px-24">
+    <div
+      className="flex flex-col justify-start items-center px-2 lg:px-24"
+      id="Projects"
+    >
       <h2 className="w-full">Projects</h2>
       <div className="w-full flex-col lg:flex-row flex [&>*]:w-[90%] lg:[&>*]:w-[32%] justify-evenly">
         {projects.map(
