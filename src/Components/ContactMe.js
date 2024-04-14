@@ -60,7 +60,7 @@ export function ContactMe() {
               className=" max-h-[550px] max-w-[5600px]"
             />
             <Image
-              src="ContactMe/square-instagram.svg"
+              src="/ContactMe/square-instagram.svg"
               width={30}
               height={30}
               alt="Placeholder"

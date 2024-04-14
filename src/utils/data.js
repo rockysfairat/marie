@@ -1,13 +1,42 @@
 export const projects = [
   {
     id: "001",
-    projectImgSrc: "/Projects/Bedroom_01.jpg",
+    projectImgSrc: "/Borsch/06_Post.jpg",
     projectImgAlt: "Placeholder",
     projectName: "The Borsch",
     projectYear: "2020",
     projectType: "Bistro",
     pageUrl: "The-Borsch",
-    data: "test",
+    clients: "Nataliia Bas and Alex Martynov",
+    heroSection: {
+      description: [
+        "The Borsch is THE bistro in Vinohrady discrict of Prague. The scope of the project was to reconstruct basement space of Sri-Lanka style restaurant into modern Ukrainian bistro in both limited time and budget.",
+        "My main inspiration was the vision of two brave enthusiasts with a mission to promote Ukrainian culture through cuisine. And the goal was to create a place that would be modern, but somehow subconsciously familiar and traditional.",
+        "We had a limited budget, but absolutely limitless passion and (thankfully) friends willing to help. And as a result, we have created a cozy and joyful meeting place for many people. Artworks on the walls and in backrooms are creation of Mariko Gelman.",
+      ],
+      imageUrl: "/Borsch/05_Post.jpg",
+    },
+    floorPlanImages: {
+      data: [
+        {
+          imageUrl: "/Borsch/Screenshot_2024-03-26_233201.jpg",
+          description: "Floor plan",
+        },
+      ],
+      styles: "justify-center",
+    },
+    showCaseImages: [
+      "/Borsch/01_2_Post.jpg",
+      "/Borsch/03_Post.jpg",
+      "/Borsch/05_Post.jpg",
+    ],
+    beforeAfterImages: {
+      data: [
+        "/Borsch/cc02fead-9e1c-4daa-9100-8e0ec89a9001.jpg",
+        "/Borsch/ccb936b4-b47c-4ffa-acb3-1e024d3b74cd.jpg",
+      ],
+      styles: "contain",
+    },
   },
   {
     id: "002",
@@ -17,6 +46,46 @@ export const projects = [
     projectYear: "2020-2021",
     projectType: "Residential",
     pageUrl: "Mikulov-house",
+    clients: "Young couple",
+    randomImages: ["/Mikulov/C06_post.jpg", "/Mikulov/C07_post.jpg"],
+    heroSection: {
+      description: [
+        "Mikulov house is a residential interior project for a young couple, both working remotely. Design includes customizing a typical housing development for the clients specific needs and preferences, as well as negotiating changes with the developer. Interior is based on natural colors and materials, creating a cozy setting for their family life. We broke down the interior work into stages according to priorities to ensure it remains cost-effective",
+      ],
+      imageUrl: "/Hero/20231226_143921.jpg",
+    },
+    floorPlanImages: {
+      data: [
+        {
+          imageUrl: "/Mikulov/ground-floor-before.jpg",
+          description: "Ground floor by developer",
+        },
+        {
+          imageUrl: "/Mikulov/ground-floor-after.jpg",
+          description: "Ground floor by me",
+        },
+        {
+          imageUrl: "/Mikulov/first-floor-before.jpg",
+          description: "First floor by me",
+        },
+        {
+          imageUrl: "/Mikulov/first-floor-after.jpg",
+          description: "First floor by me",
+        },
+      ],
+      styles: "justify-between",
+    },
+    showCaseImages: ["/Mikulov/Bathroom_1.jpg", "/Mikulov/anna2_2_Post.jpg"],
+    beforeAfterImages: ["/Mikulov/B01_3_post.jpg", "/Mikulov/B01_2.jpg"],
+  },
+  {
+    id: "003",
+    projectImgSrc: "/Projects/Bedroom_01.jpg",
+    projectImgAlt: "Placeholder",
+    projectName: "Holešovice apt",
+    projectYear: "2020",
+    projectType: "Real estate archviz",
+    pageUrl: "Holesovice",
     clients: "Young couple",
     heroSection: {
       description:
@@ -43,16 +112,6 @@ export const projects = [
     ],
     showCaseImages: ["/Mikulov/Bathroom_1.jpg", "/Mikulov/anna2_2_Post.jpg"],
     beforeAfterImages: ["/Mikulov/B01_3_post.jpg", "/Mikulov/B01_2.jpg"],
-  },
-  {
-    id: "003",
-    projectImgSrc: "/Projects/Bedroom_01.jpg",
-    projectImgAlt: "Placeholder",
-    projectName: "Holešovice apt",
-    projectYear: "2020",
-    projectType: "Real estate archviz",
-    pageUrl: "Holesovice",
-    data: "test",
   },
 ];
 
