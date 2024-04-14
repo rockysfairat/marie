@@ -66,7 +66,7 @@ export function ContactMe() {
             </a>
             <a href="https://www.instagram.com/marie.does.design">
               <Image
-                src="ContactMe/square-instagram.svg"
+                src="/ContactMe/square-instagram.svg"
                 width={30}
                 height={30}
                 alt="Placeholder"
