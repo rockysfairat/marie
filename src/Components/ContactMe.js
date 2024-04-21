@@ -3,7 +3,10 @@ import Image from "next/image";
 
 export function ContactMe() {
   return (
-    <div className="bg-biege w-full px-2 lg:px-24 py-0 lg:py-16" id="ContactMe">
+    <div
+      className="bg-biege w-full px-2 lg:px-24 mt-10 sm:mt-0 md:mt-0 lg:py-16"
+      id="ContactMe"
+    >
       <h2>Contact Me</h2>
       <div className="w-full flex flex-col lg:flex-row mr-10 mt-20">
         <Image
@@ -42,7 +45,7 @@ export function ContactMe() {
             Send message
           </button>
           <h2>SOCIALS</h2>
-          <div className="social-icons flex flex-row gap-2 ">
+          <div className="social-icons flex flex-row gap-2 pb-5">
             {" "}
             <a href="https://api.whatsapp.com/send?phone=420702911501">
               <Image

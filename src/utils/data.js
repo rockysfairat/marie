@@ -76,7 +76,10 @@ export const projects = [
       styles: "justify-between",
     },
     showCaseImages: ["/Mikulov/Bathroom_1.jpg", "/Mikulov/anna2_2_Post.jpg"],
-    beforeAfterImages: ["/Mikulov/B01_3_post.jpg", "/Mikulov/B01_2.jpg"],
+    beforeAfterImages: {
+      data: ["/Mikulov/B01_3_post.jpg", "/Mikulov/B01_2.jpg"],
+      styles: "contain",
+    },
   },
   {
     id: "003",
