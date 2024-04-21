@@ -10,12 +10,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="w-full pt-[60px] flex flex-col items-center ">
+      <body className="w-full sm:pt-[60px] flex flex-col items-center pt-[30px]">
         <h1 className=" w-full px-4 xl:px-24 uppercase font-semibold text-3xl">
           marie.does.design
         </h1>
-        <div className="my-[6px] w-full xl:w-[90%] mx-0 xl:mx-24">
-          <hr style={{ color: "black", height: "1px" }} />
+        <div className=" px-4 my-[6px] w-full xl:px-24 mx-[10px] xl:mx-24">
+          <hr className="" style={{ color: "black", height: "1px" }} />
         </div>
 
         <Nav />

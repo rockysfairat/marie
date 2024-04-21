@@ -1,7 +1,7 @@
 export function Nav() {
   return (
     <nav className="w-full px-4 xl:px-24">
-      <ol className="flex  flex-wrap justify-between text-xl uppercase">
+      <ol className="flex  flex-wrap justify-between text-xl uppercase [&>li]:mb-2">
         <li>
           <a href="#Projects" className="hover:underline">
             Projects

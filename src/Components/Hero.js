@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <div className="bg-dark flex h-screen lg:flex-row flex-col items-center xl:justify-between jusify-center px-0 xl:px-16 pb-4">
       <div className="flex w-full xl:w-1/2 flex-col xl:justify-between jusify-center xl:[&>*]:mr-10 [&>*]:mr-0 h-fit lg:h-[80%]">
-        <div className="font-montserrat pt-9 px-4">
+        <div className="pt-9 px-4">
           <p className="text-5xl xl:text-8xl text-white max-w-sm">FROM</p>
           <p className="text-5xl xl:text-8xl text-white">CONCEPT</p>
           <p className="text-5xl xl:text-8xl text-white">TO </p>
