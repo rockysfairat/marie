@@ -2,18 +2,18 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <header className="w-full h-[90%] flex flex-col lg:flex-row items-center justify-center space-x-[90px] py-[90px]">
+    <header className="w-full h-[90%] flex flex-col xl:flex-row items-center justify-start xl:justify-center space-x-0 xl:space-x-[90px] py-[40px] xl:py-0">
       <Image
         src="/Header/C09.jpg"
         width={650}
         height={600}
         alt="Placeholder"
         style={{ objectFit: "cover" }}
-        className="w-[40%] max-h-[550px] max-w-[5600px]"
+        className="w-full xl:w-[40%] max-h-[550px] max-w-[5600px]"
       />
 
-      <div className="relative flex flex-col w-4/8 justify-center h-[550px] ">
-        <p className="text-2xl lg:text-5xl text-balanced leading-snug uppercase max-w-[400px] font-light mt-[-80px] tracking-wide">
+      <div className="relative flex flex-col w-4/8 justify-center items-center xl:items-start h-[200px] xl:h-[550px]">
+        <p className="text-3xl xl:text-5xl text-balanced leading-snug uppercase max-w-[400px] font-light mt-[-80px] tracking-wide">
           architecture interior design archviz
         </p>
         <a
