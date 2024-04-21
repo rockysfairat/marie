@@ -30,7 +30,7 @@ export function ContactMe() {
 
   // Handling the user msg:
 
-  const [msg, setMsg] = useState("");
+  const [msg, setMsg] = useState("Send a message");
 
   // Grabbing user's input:
   const handleMsg = (e) => {
