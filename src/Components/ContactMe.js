@@ -23,10 +23,12 @@ export function ContactMe() {
           <h2>PHONE</h2>
           <p>+420 702 911 501</p>
           <h2>EMAIL</h2>
-          <p>marie.does.design@gmail.com</p>
+          <a href="mailto:marie@mariedoesdesign.com" className="mb-10 text-xl">
+            marie@mariedoesdesign.com
+          </a>
           <textarea
             name="message"
-            className="bg-backgroundColor/25 rounded-md p-2 font-secondary w-full h-36"
+            className="bg-backgroundColor/25 rounded-md p-2 font-secondary w-full h-36 mt-4"
             rows="17"
             cols="10"
             required

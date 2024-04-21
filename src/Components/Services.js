@@ -10,7 +10,7 @@ export function Services() {
       <h2 className="w-full">Services</h2>
       <div className="w-min xl:w-full flex lg:flex-row flex-col justify-between items-start xl:[&>*]:w-[22%] flex-wrap overflow-hidden">
         {services.map(({ id, serviceImgSrc, serviceImgAlt, serviceName }) => (
-          <div key={id} className="flex flex-col mb-3">
+          <div key={id} className="flex flex-col mb-16">
             <p className="text-6xl text-brown font-light">{id}</p>
 
             <div className="flex justify-center items-center my-2 h-[300px] w-[300px] overflow-hidden">

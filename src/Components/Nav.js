@@ -1,6 +1,6 @@
 export function Nav() {
   return (
-    <nav className="w-full px-24">
+    <nav className="w-full px-4 xl:px-24">
       <ol className="flex  flex-wrap justify-between text-xl uppercase">
         <li>
           <a href="#Projects" className="hover:underline">

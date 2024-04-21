@@ -4,11 +4,11 @@ import Link from "next/link";
 export function Projects() {
   return (
     <div
-      className="flex flex-col justify-start items-center px-2 lg:px-24"
+      className="flex flex-col justify-start items-center px-2 xl:px-24"
       id="Projects"
     >
       <h2 className="w-full">Projects</h2>
-      <div className="w-full flex-col lg:flex-row flex [&>*]:w-[90%] lg:[&>*]:w-[32%] justify-evenly">
+      <div className="w-full flex-col xl:flex-row flex [&>*]:w-full xl:[&>*]:w-[32%] justify-evenly items-center [&>*]:mb-10">
         {projects.map(
           ({
             id,
@@ -37,7 +37,7 @@ export function Projects() {
                   width={500}
                   height={300}
                   style={{ objectFit: "cover" }}
-                  className="h-[300px] w-[300px]"
+                  className="h-[300px] w-full"
                 />
 
                 <div className="flex flex-col [&>*]:flex [&>*]:justify-start border-dark border-t-[1px] mt-3 pt-3">
