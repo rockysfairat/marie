@@ -20,7 +20,7 @@ export function Header() {
         </p>
         <a
           className="absolute border-[1px] border-dark w-2/4 p-2 uppercase text-nowrap flex justify-center items-center bottom-0"
-          href="#"
+          href="/#Services"
         >
           Learn more
         </a>
