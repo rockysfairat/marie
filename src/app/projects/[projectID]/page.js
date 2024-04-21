@@ -47,26 +47,28 @@ async function page({ params }) {
         </div>
       </header>
       {/* Section with images if it exists */}
-      {data.randomImages && (
-        <div className="sm:flex-row md:flex-row justify-between w-full h-full sm:p-24 md:p-24 sm:gap-20 md:gap-20 flex-col p-4">
-          {data.randomImages.map((item, idx) => {
-            return (
-              <Image
-                key={idx}
-                src={item}
-                width={1200}
-                height={300}
-                alt="Placeholder"
-                loading="lazy"
-                style={{ objectFit: "cover", height: "auto" }}
-                className="w-full sm:h-[700px] md:h-[700px] mb-4 "
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                quality={100}
-              />
-            );
-          })}
-        </div>
-      )}
+      <div>
+        {data.randomImages && (
+          <div className="sm:flex-row md:flex-row justify-between w-full sm:p-24 md:p-24 sm:gap-20 md:gap-20 flex-col p-4">
+            {data.randomImages.map((item, idx) => {
+              return (
+                <Image
+                  key={idx}
+                  src={item}
+                  width={1200}
+                  height={1200}
+                  alt="Placeholder"
+                  loading="lazy"
+                  style={{ objectFit: "contain" }}
+                  className="w-full sm:h-[700px] md:h-[700px] mb-4 "
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={100}
+                />
+              );
+            })}
+          </div>
+        )}
+      </div>
       {/* Hero section */}
 
       <div className="w-full sm:p-24 md:p-24 p-4 flex sm:h-screen md:h-screen lg:flex-row flex-col items-center sm:justify-between md:justify-between">
@@ -151,26 +153,27 @@ async function page({ params }) {
       </div>
       {/* Before and after section */}
       <div className="sm:p-24 md:p-24 w-full flex sm:flex-row md:flex-row gap-20 flex-col">
-        {data.beforeAfterImages.data.map((imgUrl, idx) => {
-          return (
-            <div
-              key={idx}
-              className="sm:w-1/2 md:w-1/2 sm:p-0 md:p-0 p-2 sm:h-[700px] md:h-[700px] h-[400px]"
-            >
-              <Image
-                src={imgUrl}
-                width={800}
-                height={300}
-                alt="Placeholder"
-                loading="lazy"
-                style={{ objectFit: data.beforeAfterImages?.styles }}
-                className="w-full h-full sm:h-[700px] md:h-[700px] mb-2 object-contain"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                quality={100}
-              />
-            </div>
-          );
-        })}
+        {data?.beforeAfterImages?.data &&
+          data.beforeAfterImages.data.map((imgUrl, idx) => {
+            return (
+              <div
+                key={idx}
+                className="sm:w-1/2 md:w-1/2 sm:p-0 md:p-0 p-2 sm:h-[700px] md:h-[700px] h-[400px]"
+              >
+                <Image
+                  src={imgUrl}
+                  width={800}
+                  height={300}
+                  alt="Placeholder"
+                  loading="lazy"
+                  style={{ objectFit: data.beforeAfterImages?.styles }}
+                  className="w-full h-full sm:h-[700px] md:h-[700px] mb-2 object-contain"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={100}
+                />
+              </div>
+            );
+          })}
       </div>
       <ContactMe />
     </>

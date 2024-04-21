@@ -87,34 +87,43 @@ export const projects = [
     projectImgAlt: "Placeholder",
     projectName: "Holešovice apt",
     projectYear: "2020",
-    projectType: "Real estate archviz",
+    projectType: "Real estate vizualisation",
     pageUrl: "Holesovice",
-    clients: "Young couple",
+    clients: "Real estate agency",
+    randomImages: ["/Holesovice/Holesovice_apt/LVR_06_Post.jpg"],
     heroSection: {
-      description:
-        "Mikulov house is a residential interior project for a young couple, both working remotely. Design includes customizing a typical housing development for the clients specific needs and preferences, as well as negotiating changes with the developer. Interior is based on natural colors and materials, creating a cozy setting for their family life. We broke down the interior work into stages according to priorities to ensure it remains cost-effective",
-      imageUrl: "/Hero/20231226_143921.jpg",
+      description: [
+        "Transformation of a penthouse in Prague's Holešovice district for real estate firm. Project includes overcoming a challenging layout to create a desirable space featuring a bedroom, living room, and two expansivezterraces. I implemented minor changes and décor to maximize livability and highlight the apartment's unique features and create commercially attractive image for potential investors.",
+      ],
+      imageUrl: "/Holesovice/Holesovice_apt/photo6023876170661081836.jpg",
     },
-    floorPlanImages: [
-      {
-        imageUrl: "/Mikulov/ground-floor-before.jpg",
-        description: "Ground floor by developer",
-      },
-      {
-        imageUrl: "/Mikulov/ground-floor-after.jpg",
-        description: "Ground floor by me",
-      },
-      {
-        imageUrl: "/Mikulov/first-floor-before.jpg",
-        description: "First floor by me",
-      },
-      {
-        imageUrl: "/Mikulov/first-floor-after.jpg",
-        description: "First floor by me",
-      },
+    floorPlanImages: {
+      data: [
+        {
+          imageUrl: "/Holesovice/Holesovice_apt/Bedroom_top_view_WC.jpg",
+          description: "Level 1",
+        },
+        {
+          imageUrl: "/Holesovice/Holesovice_apt/LVR_09_Post.jpg",
+          description: "Level 2",
+        },
+      ],
+      styles: "justify-between",
+    },
+    showCaseImages: [
+      "/Holesovice/Holesovice_apt/Bedroom_01.jpg",
+      "/Holesovice/Holesovice_apt/Bedroom_03.jpg",
+      "/Holesovice/Holesovice_apt/LVR_04_Post.jpg",
+      "/Holesovice/Holesovice_apt/LVR_03_Post.jpg",
+      "/Holesovice/Holesovice_apt/TRS_02.jpg",
+      "/Holesovice/Holesovice_apt/TRS_03.jpg",
+      "/Holesovice/Holesovice_apt/TRS_04.jpg",
+      "/Holesovice/Holesovice_apt/TRS_05.jpg",
     ],
-    showCaseImages: ["/Mikulov/Bathroom_1.jpg", "/Mikulov/anna2_2_Post.jpg"],
-    beforeAfterImages: ["/Mikulov/B01_3_post.jpg", "/Mikulov/B01_2.jpg"],
+    // beforeAfterImages: {
+    //   data: ["/Mikulov/B01_3_post.jpg", "/Mikulov/B01_2.jpg"],
+    //   styles: "contain",
+    // },
   },
 ];
 
