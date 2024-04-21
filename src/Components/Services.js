@@ -13,7 +13,7 @@ export function Services() {
           <div key={id} className="flex flex-col mb-16">
             <p className="text-6xl text-brown font-light">{id}</p>
 
-            <div className="flex justify-center items-center my-2 h-[300px] w-[300px] overflow-hidden">
+            <div className="flex-col justify-center items-center my-2 h-[300px] w-[300px] ">
               <Image
                 src={serviceImgSrc}
                 alt={serviceImgAlt}
@@ -22,11 +22,10 @@ export function Services() {
                 style={{ objectFit: "cover" }}
                 className="h-[300px] w-[300px]"
               />
+              <p className="text-brown text-center align-middle flex justify-center items-center">
+                {serviceName}
+              </p>
             </div>
-
-            <p className="text-brown text-center align-middle flex justify-center items-center">
-              {serviceName}
-            </p>
           </div>
         ))}
       </div>

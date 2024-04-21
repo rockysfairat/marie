@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function About() {
   return (
-    <div className="bg-greyDark flex flex-col px-2 lg:px-24 pb-4">
+    <div className="bg-greyDark flex flex-col px-5 lg:px-24 pb-4">
       <h2 className="w-full">About</h2>
       <div className="flex flex-col lg:flex-row justify-between">
         <div className="w-full lg:w-[60%] flex flex-col justify-center [&>*]:mb-5 text-dark text-xl">
