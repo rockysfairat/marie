@@ -30,7 +30,7 @@ export function ContactMe() {
 
   // Handling the user msg:
 
-  const [msg, setMsg] = useState("Send a message");
+  const [msg, setMsg] = useState("");
 
   // Grabbing user's input:
   const handleMsg = (e) => {
@@ -66,6 +66,7 @@ export function ContactMe() {
             name="msg"
             value={msg}
             onChange={handleMsg}
+            placeholder="Send a message"
             className="bg-backgroundColor/25 rounded-md p-2 font-secondary w-full h-36 mt-4"
             rows="17"
             cols="10"
