@@ -71,9 +71,12 @@ async function page({ params }) {
 
       <div className="w-full sm:p-24 md:p-24 p-4 flex sm:h-screen md:h-screen lg:flex-row flex-col items-center sm:justify-between md:justify-between">
         <div className="sm:w-4/6 md:w-4/6">
-          {data?.heroSection?.description.map((text) => {
+          {data?.heroSection?.description.map((text, idx) => {
             return (
-              <p className="sm:text-xl md:text-xl xl:text-2xl  text-wrap mb-5 ">
+              <p
+                key={idx}
+                className="sm:text-xl md:text-xl xl:text-2xl  text-wrap mb-5 "
+              >
                 {text}
               </p>
             );
