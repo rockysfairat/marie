@@ -10,8 +10,8 @@ export function Reviews() {
             key={id}
             className="w-full lg:w-[25%] flex flex-col lg:mb-0 mb-6"
           >
-            <div className="bg-reviews grow p-3 flex justify-center items-center rounded-3xl">
-              <p className="text-center font-light">{reviewTxt}</p>
+            <div className="bg-reviews grow p-3 flex justify-center items-center">
+              <p className=" font-light">{reviewTxt}</p>
             </div>
 
             <p className="font-bold text-brown text-center text-lg">
