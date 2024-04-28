@@ -12,7 +12,7 @@ export function Header() {
         className="w-full xl:w-[40%] max-h-[550px] max-w-[5600px]"
       />
 
-      <div className="relative flex flex-col w-4/8 justify-center items-start xl:items-start h-[200px] xl:h-[550px] mt-3">
+      <div className="relative flex flex-col w-4/8 justify-center items-start xl:items-start h-[200px] xl:h-[550px] mt-3 sm:mt-0 md:mt-0">
         <p className="flex flex-col text-3xl xl:text-5xl text-balanced leading-snug uppercase max-w-[400px] font-light mt-[-80px] tracking-wide sm:text-3xl md:text-3xl [&>span]:block justify-start items-start">
           <span>architecture </span>
           <span>interior design</span>

@@ -1,15 +1,24 @@
+"use client";
 import Image from "next/image";
 import { projects } from "../utils/data";
 import Link from "next/link";
+import { useState } from "react";
+import renderProjectsView from "../utils/functions";
+
 export function Projects() {
+  const initialLimit = 3;
+  const [projectsList, setProjectsList] = useState(
+    renderProjectsView(projects, initialLimit)
+  );
+  console.log(projectsList);
   return (
     <div
       className="flex flex-col justify-start items-center px-2 xl:px-24"
       id="Projects"
     >
       <h2 className="w-full">Projects</h2>
-      <div className="w-full flex-col xl:flex-row flex [&>*]:w-full xl:[&>*]:w-[32%] justify-evenly items-center [&>*]:mb-10">
-        {projects.map(
+      <div className="w-full flex-col xl:flex-row flex [&>*]:w-full xl:[&>*]:w-[32%] flex-wrap gap-5 items-start [&>*]:mb-10">
+        {projectsList.map(
           ({
             id,
             projectImgSrc,
@@ -59,6 +68,14 @@ export function Projects() {
           )
         )}
       </div>
+      {projectsList.length % 3 === 0 && (
+        <button
+          className="border-[1px] border-dark  p-2 uppercase text-nowrap flex justify-center items-center mb-10"
+          onClick={() => setProjectsList(projects, initialLimit * 2)}
+        >
+          Show more
+        </button>
+      )}
     </div>
   );
 }
