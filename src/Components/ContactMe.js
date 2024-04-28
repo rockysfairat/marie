@@ -48,16 +48,18 @@ export function ContactMe() {
           src="/ContactMe/06_Post.jpg"
           alt="Something"
           width={800}
-          height={700}
+          height={750}
           style={{ objectFit: "contain" }}
           className="w-full lg:w-[60%]  mr-16"
         />
         <form
           onSubmit={sendEmail}
-          className="w-full lg:w-[40%] [&>h2]:text-brown [&>h2]:mb-4 [&>h2]:pt-0 [&>p]:mb-10 [&>p]:text-xl [&>h2]:border-b-[0px] [&>p]:border-b-[0px] [&>button]:mb-5"
+          className="w-full lg:w-[40%] [&>h2]:text-brown [&>h2]:mb-2 [&>h2]:pt-0 [&>p]:mb-2 [&>p]:text-xl [&>h2]:border-b-[0px] [&>p]:border-b-[0px] [&>button]:mb-5"
         >
-          <h2>PHONE</h2>
+          <h2 className="first:pt-5">PHONE</h2>
           <p>+420 702 911 501</p>
+          <h2>Address</h2>
+          <p>Drahobejlova 52, Praha 9</p>
           <h2>EMAIL</h2>
           <a href="mailto:marie@mariedoesdesign.com" className="mb-10 text-xl">
             marie@mariedoesdesign.com
