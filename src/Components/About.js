@@ -25,17 +25,20 @@ export function About() {
           </p>
         </div>
 
-        <div className="w-full lg:w-[450px]">
+        <div className="w-full lg:w-[450px] mb-10">
           <Image
             src="/About/20231109_082620-01.jpeg"
             width={800}
             height={800}
             alt="Placeholder"
             style={{ objectFit: "cover" }}
-            className="w-full"
+            className="w-full sm:pb-5 md:pb-5"
           />
         </div>
       </div>
     </div>
   );
 }
+
+// <a href="https://www.freepik.com/search">Icon by Xinh Studio</a>
+// <a href="https://www.freepik.com/search">Icon by Freepik</a>
