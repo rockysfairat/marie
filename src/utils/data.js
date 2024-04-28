@@ -131,26 +131,50 @@ export const services = [
   {
     id: "01",
     serviceImgSrc: "/Services/04_Post.jpg",
-    serviceImgAlt: "Placeholder",
+    serviceImgAlt: "Service",
     serviceName: "Architecture and interior design",
+    serviceDesc: [
+      `• full-scope design solutions`,
+      `• client's changes in development apartments`,
+      `• small architectural forms`,
+      `• commercial 3D visualizations`,
+    ],
   },
   {
     id: "02",
     serviceImgSrc: "/Services/about.jpg",
-    serviceImgAlt: "Placeholder",
+    serviceImgAlt: "Service",
     serviceName: "All stages of project documentation",
+    serviceDesc: [
+      `• verification of investment interests`,
+      `• from studio through permission until acceptance certification`,
+      `• coordination of construction process`,
+      `• contractor selection assistance`,
+    ],
   },
   {
     id: "03",
     serviceImgSrc: "/Services/sven-mieke-fteR0e2BzKo-unsplash.jpg",
-    serviceImgAlt: "Placeholder",
+    serviceImgAlt: "Service",
     serviceName: "Author supervision",
+    serviceDesc: [
+      `• constructuon site visits`,
+      `• negotiations with developers about client’s changes`,
+      `• supportive and friendly project implementaton process`,
+      `• individual approach`,
+    ],
   },
   {
     id: "04",
-    serviceImgSrc: "/placeholder.png",
-    serviceImgAlt: "Placeholder",
+    serviceImgSrc: "/Services/anna2_2_Post.jpg",
+    serviceImgAlt: "Service",
     serviceName: "Consultations",
+    serviceDesc: [
+      `• analysis of existing circumstances`,
+      `• defining goals`,
+      `• guidance in the world of styles and options`,
+      `• practical advices and lifehacks, which will help with implementing your own design`,
+    ],
   },
 ];
 
