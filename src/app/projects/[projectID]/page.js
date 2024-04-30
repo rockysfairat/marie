@@ -16,7 +16,7 @@ async function page({ params }) {
       {/* Title section */}
       <header className="w-full h-[90%] flex flex-col sm:items-center px-4 md:items-center  justify-center  sm:space-x-[90px] md:space-x-[90px] py-[90px] sm:flex-row md:flex-row ">
         <Image
-          src={data.projectImgSrc}
+          src={data?.projectImgSrc}
           width={1200}
           height={600}
           alt="Placeholder"
@@ -48,7 +48,7 @@ async function page({ params }) {
       </header>
       {/* Section with images if it exists */}
       <div>
-        {data.randomImages && (
+        {data?.randomImages && (
           <div className="sm:flex-row md:flex-row justify-between w-full sm:p-24 md:p-24 sm:gap-20 md:gap-20 flex-col p-4">
             {data.randomImages.map((item, idx) => {
               return (
@@ -72,7 +72,11 @@ async function page({ params }) {
       {/* Hero section */}
 
       <div className="w-full sm:p-24 md:p-24 p-4 flex sm:h-screen md:h-screen lg:flex-row flex-col items-center sm:justify-between md:justify-between">
-        <div className="sm:w-4/6 md:w-4/6">
+        <div
+          className={`${
+            data.id === "004" ? "sm:w-[45%] md:w-[45%]" : "sm:w-4/6 md:w-4/6"
+          }`}
+        >
           {data?.heroSection?.description.map((text, idx) => {
             return (
               <p
@@ -86,20 +90,24 @@ async function page({ params }) {
         </div>
         <div className="flex sm:w-1/2 md:w-1/2 py-4 sm:py-0 md:py-0 justify-end order-first sm:order-last md:order-last">
           <Image
-            src={data.heroSection.imageUrl}
+            src={data?.heroSection?.imageUrl}
             width={1000}
             height={300}
             alt="Placeholder"
             loading="lazy"
             style={{ objectFit: "cover" }}
-            className="sm:w-[500px] md:w-[500px] sm:h-[700px] md:h-[700px] w-full h-[400px]"
+            className={`${
+              data.id === "004"
+                ? "sm:w-[900px] md:w-[900px]"
+                : "sm:w-[500px] md:w-[500px]"
+            } sm:h-[700px] md:h-[700px] w-full h-[400px]`}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={100}
           />
         </div>
       </div>
       {/* Floor plan */}
-      {data.floorPlanImages && (
+      {data?.floorPlanImages && (
         <div
           className={`sm:p-24 md:p-24 w-full flex sm:flex-row md:flex-row flex-wrap ${data.floorPlanImages.styles}`}
         >
@@ -130,7 +138,7 @@ async function page({ params }) {
       )}
       {/* ShowCase Section */}
       <div className="">
-        {data.showCaseImages.map((imgUrl, idx) => {
+        {data?.showCaseImages.map((imgUrl, idx) => {
           return (
             <div
               key={idx}
@@ -154,11 +162,11 @@ async function page({ params }) {
       {/* Before and after section */}
       <div className="sm:p-24 md:p-24 w-full flex sm:flex-row md:flex-row gap-20 flex-col">
         {data?.beforeAfterImages?.data &&
-          data.beforeAfterImages.data.map((imgUrl, idx) => {
+          data.beforeAfterImages.data.map((imgUrl, idx, array) => {
             return (
               <div
                 key={idx}
-                className="sm:w-1/2 md:w-1/2 sm:p-0 md:p-0 p-2 sm:h-[700px] md:h-[700px] h-[400px]"
+                className={`sm:w-1/${array.length} md:w-1/${array.length} sm:p-0 md:p-0 p-2 sm:h-[700px] md:h-[700px] h-[400px]`}
               >
                 <Image
                   src={imgUrl}
@@ -166,7 +174,7 @@ async function page({ params }) {
                   height={300}
                   alt="Placeholder"
                   loading="lazy"
-                  style={{ objectFit: data.beforeAfterImages?.styles }}
+                  style={{ objectFit: data?.beforeAfterImages?.styles }}
                   className="w-full h-full sm:h-[700px] md:h-[700px] mb-2 object-contain"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   quality={100}
