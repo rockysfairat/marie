@@ -1,4 +1,7 @@
+// Next JS components:
 import Image from "next/image";
+
+// Web components:
 import { Hero } from "@/Components/Hero";
 import { Projects } from "@/Components/Projects";
 import { Services } from "@/Components/Services";

@@ -10,6 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <title>Marie Does Design</title>
       <body className="w-full sm:pt-[60px] flex flex-col items-center pt-[30px]">
         <h1 className=" w-full px-4 xl:px-24 uppercase font-semibold text-3xl">
           marie.does.design
