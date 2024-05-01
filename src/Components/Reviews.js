@@ -1,9 +1,19 @@
-import { reviews } from "../utils/data";
+"use client";
+
+import { reviewsEn, reviewsCz } from "../utils/data";
+
+// Language context:
+import { useContext } from "react";
+import { AppContext } from "../app/layout";
 
 export function Reviews() {
+  // Language switch:
+  const { englishVersion } = useContext(AppContext);
+  let reviews = englishVersion ? reviewsEn : reviewsCz;
+
   return (
     <div className="px-2 lg:px-24 flex flex-col">
-      <h2 className="w-full">Reviews</h2>
+      <h2 className="w-full">{englishVersion ? "Reviews" : "REcenze"}</h2>
       <div className="flex flex-col lg:flex-row justify-between lg:mx-0 mx-10">
         {reviews.map(({ id, reviewTxt, reviewAuthor }) => (
           <div

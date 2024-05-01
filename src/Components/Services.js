@@ -1,13 +1,23 @@
+"use client";
+
 import Image from "next/image";
-import { services } from "@/utils/data";
+import { servicesEn, servicesCz } from "@/utils/data";
+
+// Language context:
+import { useContext } from "react";
+import { AppContext } from "../app/layout";
 
 export function Services() {
+  // Language switch:
+  const { englishVersion } = useContext(AppContext);
+  let services = englishVersion ? servicesEn : servicesCz;
+
   return (
     <div
       className="flex flex-col justify-start items-center bg-greyLight px-2 xl:px-24 min-h-fit"
       id="Services"
     >
-      <h2 className="w-full">Services</h2>
+      <h2 className="w-full">{englishVersion ? "Services" : "Služby"}</h2>
       <div className="w-min xl:w-full flex lg:flex-row flex-col justify-between items-start xl:[&>*]:w-[22%] flex-wrap">
         {services.map(
           ({ id, serviceImgSrc, serviceImgAlt, serviceName, serviceDesc }) => (

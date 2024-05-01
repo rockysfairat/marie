@@ -5,11 +5,16 @@ import { useState, useContext } from "react";
 // Email JS:
 import { send } from "@emailjs/browser";
 
+// Language context:
+import { AppContext } from "../app/layout";
+
 import Image from "next/image";
 
 export function ContactMe() {
-  // Email JS functionality:
+  // Language switch:
+  const { englishVersion } = useContext(AppContext);
 
+  // Email JS functionality:
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -29,7 +34,6 @@ export function ContactMe() {
   };
 
   // Handling the user msg:
-
   const [msg, setMsg] = useState("");
 
   // Grabbing user's input:
@@ -42,7 +46,7 @@ export function ContactMe() {
       className="bg-biege w-full px-2 lg:px-24 mt-10 sm:mt-0 md:mt-0 lg:py-16"
       id="ContactMe"
     >
-      <h2>Contact Me</h2>
+      <h2>{englishVersion ? "Contact Me" : "kontakt"} </h2>
       <div className="w-full flex flex-col lg:flex-row mr-10 mt-20">
         <Image
           src="/ContactMe/06_Post.jpg"
@@ -56,7 +60,7 @@ export function ContactMe() {
           onSubmit={sendEmail}
           className="w-full lg:w-[40%] [&>h2]:text-brown [&>h2]:mb-2 [&>h2]:pt-0 [&>p]:mb-5 [&>p]:text-xl [&>h2]:border-b-[0px] [&>p]:border-b-[0px] [&>button]:mb-5"
         >
-          <h2>PHONE</h2>
+          <h2>{englishVersion ? "PHONE" : "telefon"} </h2>
           <p>+420 702 911 501</p>
           <h2>EMAIL</h2>
           <p>
@@ -68,7 +72,7 @@ export function ContactMe() {
             </a>
           </p>
 
-          <h2>Address</h2>
+          <h2>{englishVersion ? "Address" : "adresa"} </h2>
           <p>Drahobejlova 52, Praha 9</p>
           <textarea
             name="msg"
@@ -86,9 +90,9 @@ export function ContactMe() {
             className="relative border-[1px] border-dark py-2 px-4 uppercase text-nowrap flex justify-center items-center mt-10 text-lg"
             href="#"
           >
-            Send message
+            {englishVersion ? "Send message" : "napište mi"}
           </button>
-          <h2>SOCIALS</h2>
+          <h2>{englishVersion ? "SOCIALS" : "sociální sítě"} </h2>
           <div className="social-icons flex flex-row gap-2 pb-5">
             {" "}
             <a href="https://api.whatsapp.com/send?phone=420702911501">

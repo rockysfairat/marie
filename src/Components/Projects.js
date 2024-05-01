@@ -10,7 +10,6 @@ export function Projects() {
   const [projectsList, setProjectsList] = useState(
     renderProjectsView(projects, initialLimit)
   );
-  console.log(projectsList);
   return (
     <div
       className="flex flex-col justify-start items-center px-2 xl:px-24"

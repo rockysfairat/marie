@@ -1,20 +1,27 @@
+// Language context:
+import { useContext } from "react";
+import { AppContext } from "../app/layout";
+
 export function Nav() {
+  // Language switch:
+  const { englishVersion, setEnglishVersion } = useContext(AppContext);
+
   return (
     <nav className="w-full px-4 xl:px-24">
-      <ol className="flex  flex-wrap justify-between text-xl uppercase [&>li]:mb-2">
+      <ol className="flex  flex-wrap justify-between text-lg uppercase [&>li]:mb-2">
         <li>
           <a href="/#Projects" className="hover:underline">
-            Projects
+            {englishVersion ? "Projects" : " Projekty"}
           </a>
         </li>
         <li>
           <a href="/#Services" className="hover:underline">
-            Services
+            {englishVersion ? "Services" : " Služby"}
           </a>
         </li>
         <li>
           <a href="#ContactMe" className="hover:underline">
-            Contact
+            {englishVersion ? "Contact" : "Kontakt"}
           </a>
         </li>
         <li>
@@ -24,9 +31,25 @@ export function Nav() {
         </li>
         <li>
           <a href="https://savelife.in.ua/en/" className="hover:underline">
-            Help Ukraine
+            {englishVersion ? "Help Ukraine" : "Pomoc Ukrajině"}
           </a>
         </li>
+        <div className="flex justify-between items-center w-[60px]">
+          <button onClick={() => setEnglishVersion(!englishVersion)}>
+            {!englishVersion ? (
+              <span className="text-greyDark">EN</span>
+            ) : (
+              <span className="text-dark">EN</span>
+            )}
+          </button>
+          <button onClick={() => setEnglishVersion(!englishVersion)}>
+            {!englishVersion ? (
+              <span className="text-dark">CZ</span>
+            ) : (
+              <span className="text-greyDark">CZ</span>
+            )}
+          </button>
+        </div>
       </ol>
     </nav>
   );
