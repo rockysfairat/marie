@@ -14,8 +14,9 @@ export default function RootLayout({ children }) {
   const [languagePack, setLanguagePack] = useState(
     englishVersion ? "english" : "czech"
   );
+  // Change what is after ":" to "czech" when you are done
   useEffect(() => {
-    setLanguagePack(englishVersion ? "english" : "czech");
+    setLanguagePack(englishVersion ? "english" : "english");
   }, [englishVersion]);
   return (
     <html lang="en">
