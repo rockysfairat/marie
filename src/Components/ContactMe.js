@@ -14,6 +14,12 @@ export function ContactMe() {
   // Language switch:
   const { englishVersion } = useContext(AppContext);
 
+  // Notification that msg is sent:
+  const [isSent, setIsSent] = useState(false);
+  const showSentNotification = (e) => {
+    setIsSent(true);
+  };
+
   // Email JS functionality:
   const sendEmail = (e) => {
     e.preventDefault();
@@ -21,11 +27,11 @@ export function ContactMe() {
     send(
       process.env.NEXT_PUBLIC_SERVICE_ID,
       process.env.NEXT_PUBLIC_TEMPLATE_ID,
-      { msg },
+      { senderName, senderEmail, msg },
       process.env.NEXT_PUBLIC_PUBLIC_KEY
     ).then(
       (result) => {
-        alert(result.text);
+        showSentNotification(result);
       },
       (error) => {
         alert(error.text);
@@ -34,9 +40,17 @@ export function ContactMe() {
   };
 
   // Handling the user msg:
+  const [senderName, setSenderName] = useState("");
+  const [senderEmail, setSenderEmail] = useState("");
   const [msg, setMsg] = useState("");
 
   // Grabbing user's input:
+  const handleSenderName = (e) => {
+    setSenderName(e.target.value);
+  };
+  const handleSenderEmail = (e) => {
+    setSenderEmail(e.target.value);
+  };
   const handleMsg = (e) => {
     setMsg(e.target.value);
   };
@@ -47,7 +61,7 @@ export function ContactMe() {
       id="ContactMe"
     >
       <h2>{englishVersion ? "Contact Me" : "kontakt"} </h2>
-      <div className="w-full flex flex-col lg:flex-row mr-10 mt-20">
+      <div className="w-full flex flex-col lg:flex-row lg:items-start mr-10 mt-20">
         <Image
           src="/ContactMe/06_Post.jpg"
           alt="Something"
@@ -74,16 +88,45 @@ export function ContactMe() {
 
           <h2>{englishVersion ? "Address" : "adresa"} </h2>
           <p>Drahobejlova 52, Praha 9</p>
+          <div className={"h-10" + (isSent ? " block" : " hidden")}>
+            <p>
+              {englishVersion
+                ? "✅ Thanks for contacting us. We'll get back to you as soon as possible."
+                : "✅ Děkujeme, že jste nás kontaktovali. Ozveme se vám co nejdříve."}
+            </p>
+          </div>
+
+          <input
+            type="text"
+            name="senderName"
+            value={senderName}
+            placeholder={englishVersion ? "Name" : "Jméno"}
+            onChange={handleSenderName}
+            required
+            className="bg-backgroundColor/25 rounded-md p-2 font-secondary w-full h-10 mt-4"
+          ></input>
+
+          <input
+            type="email"
+            name="senderEmail"
+            placeholder="E-mail"
+            required
+            value={senderEmail}
+            onChange={handleSenderEmail}
+            className="bg-backgroundColor/25 rounded-md p-2 font-secondary w-full h-10 mt-4"
+          ></input>
+
           <textarea
             name="msg"
             value={msg}
             onChange={handleMsg}
-            placeholder="Send a message"
+            placeholder={englishVersion ? "Send a message" : "Napište mi"}
             className="bg-backgroundColor/25 rounded-md p-2 font-secondary w-full h-36 mt-4"
             rows="17"
             cols="10"
             required
           ></textarea>
+
           <button
             type="submit"
             value="Send"
