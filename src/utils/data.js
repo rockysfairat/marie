@@ -58,35 +58,41 @@ export const projects = [
     id: "002",
     projectImgSrc: "/Projects/2974927498472947_C09.jpg",
     projectImgAlt: "Placeholder",
-    projectName: "Mikulov house",
+    projectName: {
+      english: "Mikulov house",
+    },
     projectYear: "2020-2021",
     projectType: "Residential",
     pageUrl: "Mikulov-house",
-    clients: "Young couple",
+    clients: {
+      english: "Young couple",
+    },
     randomImages: ["/Mikulov/C06_post.jpg", "/Mikulov/C07_post.jpg"],
     heroSection: {
-      description: [
-        "Mikulov house is a residential interior project for a young couple, both working remotely. Design includes customizing a typical housing development for the clients specific needs and preferences, as well as negotiating changes with the developer. Interior is based on natural colors and materials, creating a cozy setting for their family life. We broke down the interior work into stages according to priorities to ensure it remains cost-effective",
-      ],
+      description: {
+        english: [
+          "Mikulov house is a residential interior project for a young couple, both working remotely. Design includes customizing a typical housing development for the clients specific needs and preferences, as well as negotiating changes with the developer. Interior is based on natural colors and materials, creating a cozy setting for their family life. We broke down the interior work into stages according to priorities to ensure it remains cost-effective",
+        ],
+      },
       imageUrl: "/Hero/20231226_143921.jpg",
     },
     floorPlanImages: {
       data: [
         {
           imageUrl: "/Mikulov/ground-floor-before.jpg",
-          description: "Ground floor by developer",
+          english: "Ground floor by developer",
         },
         {
           imageUrl: "/Mikulov/ground-floor-after.jpg",
-          description: "Ground floor by me",
+          english: "Ground floor by me",
         },
         {
           imageUrl: "/Mikulov/first-floor-before.jpg",
-          description: "First floor by me",
+          english: "First floor by me",
         },
         {
           imageUrl: "/Mikulov/first-floor-after.jpg",
-          description: "First floor by me",
+          english: "First floor by me",
         },
       ],
       styles: "justify-between",
@@ -101,27 +107,33 @@ export const projects = [
     id: "003",
     projectImgSrc: "/Projects/Bedroom_01.jpg",
     projectImgAlt: "Placeholder",
-    projectName: "Holešovice apt",
+    projectName: {
+      english: "Holešovice apt",
+    },
     projectYear: "2020",
     projectType: "Real estate vizualisation",
     pageUrl: "Holesovice",
-    clients: "Real estate agency",
+    clients: {
+      english: "Real estate agency",
+    },
     randomImages: ["/Holesovice/Holesovice_apt/LVR_06_Post.jpg"],
     heroSection: {
-      description: [
-        "Transformation of a penthouse in Prague's Holešovice district for real estate firm. Project includes overcoming a challenging layout to create a desirable space featuring a bedroom, living room, and two expansivezterraces. I implemented minor changes and décor to maximize livability and highlight the apartment's unique features and create commercially attractive image for potential investors.",
-      ],
+      description: {
+        english: [
+          "Transformation of a penthouse in Prague's Holešovice district for real estate firm. Project includes overcoming a challenging layout to create a desirable space featuring a bedroom, living room, and two expansivezterraces. I implemented minor changes and décor to maximize livability and highlight the apartment's unique features and create commercially attractive image for potential investors.",
+        ],
+      },
       imageUrl: "/Holesovice/Holesovice_apt/photo6023876170661081836.jpg",
     },
     floorPlanImages: {
       data: [
         {
           imageUrl: "/Holesovice/Holesovice_apt/Bedroom_top_view_WC.jpg",
-          description: "Level 1",
+          english: "Level 1",
         },
         {
           imageUrl: "/Holesovice/Holesovice_apt/LVR_09_Post.jpg",
-          description: "Level 2",
+          english: "Level 2",
         },
       ],
       styles: "justify-between",
@@ -141,27 +153,33 @@ export const projects = [
     id: "004",
     projectImgSrc: "/Appartment1+1/08_Post.jpg",
     projectImgAlt: "Placeholder",
-    projectName: "Appartment 1+1",
+    projectName: {
+      english: "Appartment 1+1",
+    },
     projectYear: "2020",
     projectType: "Interior design",
     pageUrl: "Appartment",
-    clients: "Private investor",
+    clients: {
+      english: "Private investor",
+    },
     randomImages: ["/Appartment1+1/06_Post.jpg"],
     heroSection: {
-      description: [
-        "This investment property in a newly built apartment was optimized by converting the kitchen and a small separate room into a studio-style space. The transformation included combining the kitchen, dining, and relaxation areas with a designated spot for home office use. Additionally, a quiet and isolated bedroom space was created to enhance comfort. The goal was to design a cozy and inviting rental apartment, perfect for modern living of singles or young families.",
-      ],
+      description: {
+        english: [
+          "This investment property in a newly built apartment was optimized by converting the kitchen and a small separate room into a studio-style space. The transformation included combining the kitchen, dining, and relaxation areas with a designated spot for home office use. Additionally, a quiet and isolated bedroom space was created to enhance comfort. The goal was to design a cozy and inviting rental apartment, perfect for modern living of singles or young families.",
+        ],
+      },
       imageUrl: "/Appartment1+1/04_Post1.jpg",
     },
     floorPlanImages: {
       data: [
         {
           imageUrl: "/Appartment1+1/eb14203b-0be6-4478-b3ef-59ce3cc23093.jpg",
-          description: "Before",
+          english: "Before",
         },
         {
           imageUrl: "/Appartment1+1/plan_after.jpg",
-          description: "After",
+          english: "After",
         },
       ],
       styles: "justify-between",
