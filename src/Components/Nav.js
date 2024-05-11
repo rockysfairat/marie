@@ -1,14 +1,14 @@
 // Language context:
 import { useContext } from "react";
 import { AppContext } from "../app/layout";
-
+import { useState } from "react";
 export function Nav() {
   // Language switch:
   const { englishVersion, setEnglishVersion } = useContext(AppContext);
 
   return (
-    <nav className="w-full px-4 xl:px-24">
-      <ol className="flex  flex-wrap justify-between text-lg uppercase [&>li]:mb-2">
+    <nav className="w-full px-4 xl:px-24 relative">
+      <ul className="  flex-wrap justify-between text-lg uppercase [&>li]:mb-2 hidden sm:flex md:flex">
         <li>
           <a href="/#Projects" className="hover:underline">
             {englishVersion ? "Projects" : " Projekty"}
@@ -50,7 +50,8 @@ export function Nav() {
             )}
           </button>
         </div>
-      </ol>
+      </ul>
+      {/* hamburger menu */}
     </nav>
   );
 }
