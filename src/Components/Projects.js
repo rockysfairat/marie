@@ -2,10 +2,13 @@
 import Image from "next/image";
 import { projects } from "../utils/data";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import renderProjectsView from "../utils/functions";
+import { AppContext } from "@/app/layout";
 
 export function Projects() {
+  const { englishVersion, setEnglishVersion, setLanguagePack, languagePack } =
+    useContext(AppContext);
   const initialLimit = 3;
   const [projectsList, setProjectsList] = useState(
     renderProjectsView(projects, initialLimit)
@@ -51,7 +54,7 @@ export function Projects() {
                 <div className="flex flex-col [&>*]:flex [&>*]:justify-start border-dark border-t-[1px] mt-3 pt-3">
                   <div className="[&>*:nth-child(odd)]:w-[20%] [&>*:nth-child(odd)]:font-bold [&>*:nth-child(even)]:font-light">
                     <p>Project</p>
-                    <p>{projectName}</p>
+                    <p>{projectName[languagePack]}</p>
                   </div>
                   <div className="[&>*:nth-child(odd)]:w-[20%] [&>*:nth-child(odd)]:font-bold [&>*:nth-child(even)]:font-light">
                     <p>Year</p>

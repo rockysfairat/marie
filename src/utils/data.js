@@ -3,24 +3,40 @@ export const projects = [
     id: "001",
     projectImgSrc: "/Borsch/06_Post.jpg",
     projectImgAlt: "Placeholder",
-    projectName: "The Borsch",
+    projectName: {
+      english: "The Borsch",
+      czech: "The Boršč",
+    },
     projectYear: "2020",
     projectType: "Bistro",
     pageUrl: "The-Borsch",
-    clients: "Nataliia Bas and Alex Martynov",
+    clients: {
+      english: "Nataliia Bas and Alex Martynov",
+      czech: "Nataliia Bas a Alex Martynov",
+    },
     heroSection: {
-      description: [
-        "The Borsch is THE bistro in Vinohrady discrict of Prague. The scope of the project was to reconstruct basement space of Sri-Lanka style restaurant into modern Ukrainian bistro in both limited time and budget.",
-        "My main inspiration was the vision of two brave enthusiasts with a mission to promote Ukrainian culture through cuisine. And the goal was to create a place that would be modern, but somehow subconsciously familiar and traditional.",
-        "We had a limited budget, but absolutely limitless passion and (thankfully) friends willing to help. And as a result, we have created a cozy and joyful meeting place for many people. Artworks on the walls and in backrooms are creation of Mariko Gelman.",
-      ],
+      description: {
+        english: [
+          "The Borsch is THE bistro in Vinohrady discrict of Prague. The scope of the project was to reconstruct basement space of Sri-Lanka style restaurant into modern Ukrainian bistro in both limited time and budget.",
+          "My main inspiration was the vision of two brave enthusiasts with a mission to promote Ukrainian culture through cuisine. And the goal was to create a place that would be modern, but somehow subconsciously familiar and traditional.",
+          "We had a limited budget, but absolutely limitless passion and (thankfully) friends willing to help. And as a result, we have created a cozy and joyful meeting place for many people. Artworks on the walls and in backrooms are creation of Mariko Gelman.",
+        ],
+        czech: [
+          "The Boršč je vyhlašené bistro na Vinohradech v Praze. Předmětem projektu byla rekonstrukce suterénních prostor restaurace ve stylu Srí Lanky na moderní ukrajinské bistro v omezeném čase i rozpočtu.",
+
+          "Mojí hlavní inspirací byla vize dvou odvážných nadšenců s posláním propagovat ukrajinskou kulturu prostřednictvím kuchyně. A cílem bylo vytvořit místo, které bude moderní, ale tak nějak podvědomě známé a tradiční.",
+
+          "Měli jsme omezený rozpočet, ale naprosto neomezenou vášeň a (naštěstí) přátele ochotné pomoci. A jako výsledek jsme vytvořili útulné a radostné místo pro setkávání mnoha lidí. Umělecká díla na stěnách a v zadních místnostech jsou dílem Mariko Gelman.",
+        ],
+      },
       imageUrl: "/Borsch/05_Post.jpg",
     },
     floorPlanImages: {
       data: [
         {
           imageUrl: "/Borsch/Screenshot_2024-03-26_233201.jpg",
-          description: "Floor plan",
+          english: "Floor plan",
+          czech: "Půdorys",
         },
       ],
       styles: "justify-center",

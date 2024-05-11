@@ -3,13 +3,17 @@
 import { projects } from "@/utils/data";
 import Image from "next/image";
 import { ContactMe } from "@/Components/ContactMe";
-async function page({ params }) {
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "@/app/layout";
+
+function page({ params }) {
   const projectID = params.projectID;
+  const { englishVersion, languagePack } = useContext(AppContext);
+
   // find corresponding data for project
   const data = projects.find((item) => {
     return item.pageUrl === projectID;
   });
-  console.log(data);
 
   return (
     <>
@@ -28,19 +32,25 @@ async function page({ params }) {
 
         <div className="relative flex flex-col w-4/8 justify-center sm:h-[550px] md:h-[550px] mt-4 sm:mt-0 md:mt-0">
           <p className="sm:text-5xl md:text-5xl text-4xl text-balanced leading-snug uppercase max-w-[400px] font-light sm:mt-[-80px] md:mt-[-80px] tracking-wide">
-            {data?.projectName}
+            {data?.projectName[languagePack]}
           </p>
           <div className="sm:mt-10 md:mt-10 sm:text-lg md:text-lg">
             <p>
-              <span className="font-bold inline-block w-[80px]">Type</span>
+              <span className="font-bold inline-block w-[80px]">
+                {englishVersion ? "Type" : "Typ"}
+              </span>
               {data?.projectType}
             </p>
             <p>
-              <span className="font-bold inline-block w-[80px]">Clients</span>
-              {data?.clients}
+              <span className="font-bold inline-block w-[80px]">
+                {englishVersion ? "Clients" : "Klienti"}
+              </span>
+              {data?.clients[languagePack]}
             </p>
             <p>
-              <span className="font-bold inline-block w-[80px]">Year</span>
+              <span className="font-bold inline-block w-[80px]">
+                {englishVersion ? "Year" : "Rok"}
+              </span>
               {data?.projectYear}
             </p>
           </div>
@@ -77,7 +87,7 @@ async function page({ params }) {
             data.id === "004" ? "sm:w-[45%] md:w-[45%]" : "sm:w-4/6 md:w-4/6"
           }`}
         >
-          {data?.heroSection?.description.map((text, idx) => {
+          {data?.heroSection?.description[languagePack].map((text, idx) => {
             return (
               <p
                 key={idx}
@@ -126,9 +136,9 @@ async function page({ params }) {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   quality={100}
                 />
-                {item.description && (
+                {item["english" || "czech"] && (
                   <p className="sm:ml-[100px] md:ml-[100px] sm:mb-20 md:mb-20 text-xl ml-4">
-                    {item.description}
+                    {item[languagePack]}
                   </p>
                 )}
               </div>
@@ -146,14 +156,13 @@ async function page({ params }) {
             >
               <Image
                 src={imgUrl}
-                width={800}
-                height={800}
+                width={2000}
+                height={1200}
                 alt="Placeholder"
                 loading="lazy"
                 style={{ objectFit: "contain" }}
                 className="w-full sm:h-[700px] md:h-[700px] mb-2 sm:p-10 md:p-10 p-2"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                quality={100}
               />
             </div>
           );
