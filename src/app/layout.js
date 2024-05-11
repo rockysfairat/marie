@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
           </div>
           <ul
             className={
-              "MENU_ITEMS flex flex-col fixed top-0 w-full h-full bg-white transition-all ease-in-out delay-300 z-50 list-none mt-0 pt-12 pb-0 pl-0 pr-0 [&>li]:flex [&>li]:justify-center [&>li]:mb-4 [&>li]:text-3xl sm:hidden" +
+              "MENU_ITEMS flex flex-col fixed top-0 w-full h-full bg-white transition-all ease-in-out delay-300 z-50 list-none mt-0 pt-12 pb-0 pl-0 pr-0 [&>li]:flex [&>li]:justify-center [&>li]:mb-4 [&>li]:text-2xl sm:hidden" +
               (isOpen ? " left-0" : " left-[-100vw]")
             }
           >
@@ -63,7 +63,7 @@ export default function RootLayout({ children }) {
 
             <li>
               <a href="https://2408.cz/" className="hover:underline">
-                24.08 <span className="hidden">independent</span> design store
+                24.08 independent design store
               </a>
             </li>
             <li>
