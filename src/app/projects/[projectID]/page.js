@@ -6,7 +6,7 @@ import { ContactMe } from "@/Components/ContactMe";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "@/app/layout";
 
-function page({ params }) {
+function Page({ params }) {
   const projectID = params.projectID;
   const { englishVersion, languagePack } = useContext(AppContext);
 
@@ -71,7 +71,7 @@ function page({ params }) {
                   loading="lazy"
                   style={{ objectFit: "contain" }}
                   className="w-full sm:h-[700px] md:h-[700px] mb-4 "
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   quality={100}
                 />
               );
@@ -111,7 +111,7 @@ function page({ params }) {
                 ? "sm:w-[900px] md:w-[900px]"
                 : "sm:w-[500px] md:w-[500px]"
             } sm:h-[700px] md:h-[700px] w-full h-[400px]`}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={100}
           />
         </div>
@@ -133,7 +133,7 @@ function page({ params }) {
                   loading="lazy"
                   style={{ objectFit: "contain" }}
                   className="w-full sm:h-[600px] md:h-[600px] mb-2 sm:p-10 md:p10 mt-10 sm:mt-0 md:mt-0"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   quality={100}
                 />
                 {item["english" || "czech"] && (
@@ -162,7 +162,7 @@ function page({ params }) {
                 loading="lazy"
                 style={{ objectFit: "contain" }}
                 className="w-full sm:h-[700px] md:h-[700px] mb-2 sm:p-10 md:p-10 p-2"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           );
@@ -185,7 +185,7 @@ function page({ params }) {
                   loading="lazy"
                   style={{ objectFit: data?.beforeAfterImages?.styles }}
                   className="w-full h-full sm:h-[700px] md:h-[700px] mb-2 object-contain"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   quality={100}
                 />
               </div>
@@ -197,4 +197,4 @@ function page({ params }) {
   );
 }
 
-export default page;
+export default Page;
