@@ -119,11 +119,11 @@ function page({ params }) {
       {/* Floor plan */}
       {data?.floorPlanImages && (
         <div
-          className={`sm:p-24 md:p-24 w-full flex sm:flex-row md:flex-row flex-wrap ${data.floorPlanImages.styles}`}
+          className={`sm:p-24 md:p-24 w-full flex sm:flex-row md:flex-row flex-wrap ${data.floorPlanImages.styles} flex-col mb-10 px-2`}
         >
           {data.floorPlanImages.data.map((item, idx) => {
             return (
-              <div key={idx} className="sm:w-1/2 md:w-1/2 mt-10">
+              <div key={idx} className="sm:w-1/2 md:w-1/2 ">
                 <Image
                   key={idx}
                   src={item.imageUrl}
