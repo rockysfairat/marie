@@ -88,7 +88,7 @@ export const projects = [
         },
         {
           imageUrl: "/Mikulov/first-floor-before.jpg",
-          english: "First floor by me",
+          english: "First floor by developer",
         },
         {
           imageUrl: "/Mikulov/first-floor-after.jpg",
