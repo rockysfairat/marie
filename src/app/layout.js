@@ -26,6 +26,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <title>Marie Does Design</title>
+      <meta
+        name="description"
+        content="Interior design, architecture and all stages of project documentation in Prague and central Bohemian region"
+      />
       <body className="w-full sm:pt-[60px] flex flex-col items-center pt-[30px]">
         <AppContext.Provider
           value={{
