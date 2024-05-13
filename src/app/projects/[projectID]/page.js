@@ -39,7 +39,7 @@ function Page({ params }) {
               <span className="font-bold inline-block w-[80px]">
                 {englishVersion ? "Type" : "Typ"}
               </span>
-              {data?.projectType}
+              {data?.projectType[languagePack]}
             </p>
             <p>
               <span className="font-bold inline-block w-[80px]">

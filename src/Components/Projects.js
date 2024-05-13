@@ -62,7 +62,7 @@ export function Projects() {
                   </div>
                   <div className="[&>*:nth-child(odd)]:w-[20%] [&>*:nth-child(odd)]:font-bold [&>*:nth-child(even)]:font-light">
                     <p>Type</p>
-                    <p>{projectType}</p>
+                    <p>{projectType[languagePack]}</p>
                   </div>
                 </div>
               </div>

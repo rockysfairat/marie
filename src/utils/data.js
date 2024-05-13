@@ -8,7 +8,10 @@ export const projects = [
       czech: "The Boršč",
     },
     projectYear: "2020",
-    projectType: "Bistro",
+    projectType: {
+      english: "Bistro",
+      czech: "Bistro",
+    },
     pageUrl: "The-Borsch",
     clients: {
       english: "Nataliia Bas and Alex Martynov",
@@ -60,18 +63,26 @@ export const projects = [
     projectImgAlt: "Placeholder",
     projectName: {
       english: "Mikulov house",
+      czech: "RD Mikulov",
     },
     projectYear: "2020-2021",
-    projectType: "Residential",
+    projectType: {
+      english: "Residential",
+      czech: "Obytné",
+    },
     pageUrl: "Mikulov-house",
     clients: {
       english: "Young couple",
+      czech: "Mladý pár",
     },
     randomImages: ["/Mikulov/C06_post.jpg", "/Mikulov/C07_post.jpg"],
     heroSection: {
       description: {
         english: [
           "Mikulov house is a residential interior project for a young couple, both working remotely. Design includes customizing a typical housing development for the clients specific needs and preferences, as well as negotiating changes with the developer. Interior is based on natural colors and materials, creating a cozy setting for their family life. We broke down the interior work into stages according to priorities to ensure it remains cost-effective",
+        ],
+        czech: [
+          "Dům Mikulov je projekt interiéru pro mladý pár, oba pracující na dálku. Návrh zahrnuje přizpůsobení typového developerského projektu pro specifické potřeby a preference klientů a také vyjednávání změn s developerem. Interiér je založen na přírodních barvách a materiálech, a vytváří tak útulné prostředí pro jejich rodinný život. Interiérové práce jsme rozdělili do etap podle priorit, abychom zajistili, že budou nákladově efektivní",
         ],
       },
       imageUrl: "/Hero/20231226_143921.jpg",
@@ -81,18 +92,22 @@ export const projects = [
         {
           imageUrl: "/Mikulov/ground-floor-before.jpg",
           english: "Ground floor by developer",
+          czech: "Přízemí od developera",
         },
         {
           imageUrl: "/Mikulov/ground-floor-after.jpg",
           english: "Ground floor by me",
+          czech: "Přízemí po zapracování",
         },
         {
           imageUrl: "/Mikulov/first-floor-before.jpg",
           english: "First floor by developer",
+          czech: "První patro od developera ",
         },
         {
           imageUrl: "/Mikulov/first-floor-after.jpg",
           english: "First floor by me",
+          czech: "První patro po zapracování",
         },
       ],
       styles: "justify-between",
@@ -109,18 +124,26 @@ export const projects = [
     projectImgAlt: "Placeholder",
     projectName: {
       english: "Holešovice apt",
+      czech: "Holešovice apt",
     },
     projectYear: "2020",
-    projectType: "Real estate vizualisation",
+    projectType: {
+      english: "Real estate vizualisation",
+      czech: "Komerční vizualizace",
+    },
     pageUrl: "Holesovice",
     clients: {
       english: "Real estate agency",
+      czech: "Realitní kancelář",
     },
     randomImages: ["/Holesovice/Holesovice_apt/LVR_06_Post.jpg"],
     heroSection: {
       description: {
         english: [
           "Transformation of a penthouse in Prague's Holešovice district for real estate firm. Project includes overcoming a challenging layout to create a desirable space featuring a bedroom, living room, and two expansivezterraces. I implemented minor changes and décor to maximize livability and highlight the apartment's unique features and create commercially attractive image for potential investors.",
+        ],
+        czech: [
+          "Návrh penthouse v Praze Holešovicích pro realitní kancelář. Projekt zahrnuje překonání náročné dispozice a vytvoření žádaného prostoru s ložnicí, obývacím pokojem a dvěma rozlehlými terasami. Provedal jsem drobné změny a výzdobu, abych maximalizovala obyvatelnost a zvýraznila jedinečné vlastnosti bytu a vytvořila komerčně atraktivní vizi pro potenciální investory.",
         ],
       },
       imageUrl: "/Holesovice/Holesovice_apt/photo6023876170661081836.jpg",
@@ -130,10 +153,12 @@ export const projects = [
         {
           imageUrl: "/Holesovice/Holesovice_apt/Bedroom_top_view_WC.jpg",
           english: "Level 1",
+          czech: "Uroveň 1",
         },
         {
           imageUrl: "/Holesovice/Holesovice_apt/LVR_09_Post.jpg",
           english: "Level 2",
+          czech: "Uroveň 2",
         },
       ],
       styles: "justify-between",
@@ -155,18 +180,26 @@ export const projects = [
     projectImgAlt: "Placeholder",
     projectName: {
       english: "Appartment 1+1",
+      czech: "byt 1+1",
     },
     projectYear: "2020",
-    projectType: "Interior design",
+    projectType: {
+      english: "Interior design",
+      czech: "Návrh interiéru",
+    },
     pageUrl: "Appartment",
     clients: {
       english: "Private investor",
+      czech: "Soukromý investor",
     },
     randomImages: ["/Appartment1+1/06_Post.jpg"],
     heroSection: {
       description: {
         english: [
           "This investment property in a newly built apartment was optimized by converting the kitchen and a small separate room into a studio-style space. The transformation included combining the kitchen, dining, and relaxation areas with a designated spot for home office use. Additionally, a quiet and isolated bedroom space was created to enhance comfort. The goal was to design a cozy and inviting rental apartment, perfect for modern living of singles or young families.",
+        ],
+        czech: [
+          "Tato investiční nemovitost v nově postaveném bytovém domě byla optimalizována přeměnou kuchyně a malého samostatného pokoje na prostor ve stylu studia. Transformace zahrnovala spojení kuchyně, jídelny a relaxačních zón s místem určeným pro domácí kancelář. Kromě toho byl pro zvýšení pohodlí vytvořen tichý a izolovaný prostor ložnice. Cílem bylo navrhnout útulný a příjemný nájemní byt, ideální pro moderní bydlení jednotlivců nebo mladé rodiny.",
         ],
       },
       imageUrl: "/Appartment1+1/04_Post1.jpg",

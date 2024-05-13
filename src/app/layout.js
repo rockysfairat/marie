@@ -21,8 +21,9 @@ export default function RootLayout({ children }) {
   );
   // Change what is after ":" to "czech" when you are done
   useEffect(() => {
-    setLanguagePack(englishVersion ? "english" : "english");
+    setLanguagePack(englishVersion ? "english" : "czech");
   }, [englishVersion]);
+
   return (
     <html lang="en">
       <title>Marie Does Design</title>
