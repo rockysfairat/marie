@@ -209,10 +209,12 @@ export const projects = [
         {
           imageUrl: "/Appartment1+1/eb14203b-0be6-4478-b3ef-59ce3cc23093.jpg",
           english: "Before",
+          czech: "Před",
         },
         {
           imageUrl: "/Appartment1+1/plan_after.jpg",
           english: "After",
+          czech: "Můj návrh",
         },
       ],
       styles: "justify-between",
