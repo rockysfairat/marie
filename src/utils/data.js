@@ -226,6 +226,17 @@ export const projects = [
       "/Appartment1+1/09_Post.jpg",
       "/Appartment1+1/10_Post.jpg",
     ],
+    processRealization: {
+      title: {
+        english: "Photos of realization",
+        czech: "Foto realizace",
+      },
+      data: [
+        { imageUrl: "/Appartment1+1/photo_realization1.jpg" },
+        { imageUrl: "/Appartment1+1/photo_realization2.jpg" },
+        { imageUrl: "/Appartment1+1/photo_realization3.jpg" },
+      ],
+    },
   },
 ];
 

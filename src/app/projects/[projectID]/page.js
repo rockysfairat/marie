@@ -57,28 +57,28 @@ function Page({ params }) {
         </div>
       </header>
       {/* Section with images if it exists */}
-      <div>
-        {data?.randomImages && (
-          <div className="sm:flex-row md:flex-row justify-between w-full sm:p-24 md:p-24 sm:gap-20 md:gap-20 flex-col p-4">
-            {data.randomImages.map((item, idx) => {
-              return (
-                <Image
-                  key={idx}
-                  src={item}
-                  width={1200}
-                  height={1200}
-                  alt="Placeholder"
-                  loading="lazy"
-                  style={{ objectFit: "contain" }}
-                  className="w-full sm:h-[700px] md:h-[700px] mb-4 "
-                  // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  quality={100}
-                />
-              );
-            })}
-          </div>
-        )}
-      </div>
+
+      {data?.randomImages && (
+        <div className="sm:flex-row md:flex-row justify-between w-full sm:p-24 md:p-24 sm:gap-20 md:gap-20 flex-col p-4 flex-nowrap flex">
+          {data.randomImages.map((item, idx, array) => {
+            return (
+              <Image
+                key={idx}
+                src={item}
+                width={1200}
+                height={1200}
+                alt="Placeholder"
+                loading="lazy"
+                style={{ objectFit: "contain" }}
+                className={`w-full sm:h-[700px] md:h-[700px] mb-4 md:w-1/${array.length} sm:w-1/${array.length}`}
+                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={100}
+              />
+            );
+          })}
+        </div>
+      )}
+
       {/* Hero section */}
 
       <div className="w-full sm:p-24 md:p-24 p-4 flex sm:h-screen md:h-screen lg:flex-row flex-col items-center sm:justify-between md:justify-between">
@@ -191,6 +191,38 @@ function Page({ params }) {
               </div>
             );
           })}
+      </div>
+      {/* photo realization */}
+      <div className=" w-full flex  flex-col">
+        {data?.processRealization?.title && (
+          <p className="border-b-[0px] text-xl sm:px-24 md:px-24 mb-6 text-center sm:text-start">
+            {data.processRealization.title[languagePack]}
+          </p>
+        )}
+        <div className="sm:pt-0 md:pt-0 sm:p-24 md:p-24  w-full flex sm:flex-row md:flex-row gap-20 justify-center sm:flex-nowrap flex-wrap">
+          {data?.processRealization?.data &&
+            data.processRealization.data.map((item, idx, array) => {
+              console.log(item);
+              return (
+                <div
+                  key={idx}
+                  className={`sm:w-1/${array.length} md:w-1/${array.length} sm:p-0 md:p-0 p-2 sm:h-[700px] md:h-[700px] h-[400px] w-full`}
+                >
+                  <Image
+                    src={item.imageUrl}
+                    width={800}
+                    height={300}
+                    alt="Placeholder"
+                    loading="lazy"
+                    style={{ objectFit: "cover" }}
+                    className="w-full h-full sm:h-[700px] md:h-[700px] mb-2"
+                    // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={100}
+                  />
+                </div>
+              );
+            })}
+        </div>
       </div>
       <ContactMe />
     </>
