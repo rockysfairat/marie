@@ -180,7 +180,7 @@ export const projects = [
     projectImgAlt: "Placeholder",
     projectName: {
       english: "Appartment 1+1",
-      czech: "byt 1+1",
+      czech: "Byt 1+1",
     },
     projectYear: "2020",
     projectType: {
